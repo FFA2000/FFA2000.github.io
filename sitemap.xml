@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/07/24/Folklore-exile/</loc>
+    
+    <lastmod>2020-07-25T16:18:38.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/07/24/FirstBlog/</loc>
+    
+    <lastmod>2020-07-25T16:05:51.857Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/07/24/%E5%9F%BA%E4%BA%8EHexo%E6%A1%86%E6%9E%B6%E7%9A%84Blog%E6%90%AD%E5%BB%BA/</loc>
+    
+    <lastmod>2020-07-25T15:53:34.879Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/07/24/MarkDown/</loc>
     
-    <lastmod>2020-07-24T17:07:55.468Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/07/24/Folklore/</loc>
-    
-    <lastmod>2020-07-24T10:19:30.813Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/07/24/hello-world/</loc>
-    
-    <lastmod>2020-07-24T06:29:28.493Z</lastmod>
+    <lastmod>2020-07-25T15:25:20.329Z</lastmod>
     
   </url>
   
