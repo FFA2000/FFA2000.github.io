@@ -21,10 +21,16 @@
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E6%9C%8D%E5%8A%A1.png">
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E8%AF%9D%E9%A2%98%E4%B8%8E%E6%9C%8D%E5%8A%A1%E7%9A%84%E5%8C%BA%E5%88%AB.png">
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E8%AF%9D%E9%A2%98%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E8%AF%9D%E9%A2%98%E6%B6%88%E6%81%AF%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E6%9C%8D%E5%8A%A1%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E6%9C%8D%E5%8A%A1Client%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/Server%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%8F%82%E6%95%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E5%9E%8B.png">
 <meta property="article:published_time" content="2020-08-03T04:18:29.000Z">
-<meta property="article:modified_time" content="2020-08-03T09:52:12.269Z">
+<meta property="article:modified_time" content="2020-08-14T16:25:02.583Z">
 <meta property="article:author" content="John Fine">
-<meta property="article:tag" content="Ride &amp; Root">
+<meta property="article:tag" content="机器人控制">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/ROS%E5%8E%86%E5%8F%B2.png">
   
@@ -34,6 +40,7 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" type="text/css" href="/./main.0cf68a.css">
+
   <style type="text/css">
   
     #container.show {
@@ -68,6 +75,10 @@
 			<ul>
 			
 				<li><a href="/">主页</a></li>
+	        
+				<li><a href="/archives/index.html">目录</a></li>
+	        
+				<li><a href="/categories">分类</a></li>
 	        
 				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
@@ -130,6 +141,10 @@
 			
 				
 			
+				
+			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -147,12 +162,16 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 25%"><a href="/archives/index.html">目录</a></li>
+		        
+					<li style="width: 25%"><a href="/categories">分类</a></li>
+		        
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -249,7 +268,430 @@
 
 <script type="math/tex; mode=display">
 \\
-\\</script><h1 id="三、ROS中的命令行工具"><a href="#三、ROS中的命令行工具" class="headerlink" title="三、ROS中的命令行工具"></a>三、ROS中的命令行工具</h1><h2 id="rqt-graph"><a href="#rqt-graph" class="headerlink" title="rqt_graph"></a>rqt_graph</h2>
+\\</script><h1 id="三、ROS中的命令行工具"><a href="#三、ROS中的命令行工具" class="headerlink" title="三、ROS中的命令行工具"></a>三、ROS中的命令行工具</h1><ol>
+<li>rqt_graph:是一个利用图表的方式展示当前节点之间工作与通信状况的工具。</li>
+<li>rosnode:ros中所有与节点相关的指令。<ol>
+<li>rosnode list: 展示当前ros环境中的节点列表。</li>
+<li>rosnode info: 查看某一具体节点信息</li>
+</ol>
+</li>
+<li>rostopic:查看当前ros中与话题相关的信息。<ol>
+<li>rostopic list: 展示当前ros环境中的话题列表。</li>
+<li>rostopic pub (-r): 在没有-r的情况下，rostopic pub只发布一次消息，存在r的话后面可以添加数字，那么则会按照相应的频率发布消息。</li>
+</ol>
+</li>
+<li>rosservice: 查看ROS中与服务有关的信息。<ol>
+<li>rosservice list: 展示当前ROS环境的服务列表。</li>
+<li>rosservice call: 发布服务类型，同时会有返回数据。</li>
+</ol>
+</li>
+<li>rosbag: 能够记录消息与服务等类型的所有数据。</li>
+</ol>
+<script type="math/tex; mode=display">
+\\
+\\</script><h1 id="四、工作空间与工作包"><a href="#四、工作空间与工作包" class="headerlink" title="四、工作空间与工作包"></a>四、工作空间与工作包</h1><h2 id="1-工作空间"><a href="#1-工作空间" class="headerlink" title="1.工作空间"></a>1.工作空间</h2><p>ROS中的工作空间也就是一个存放工程开发相关文件的文件夹。其中包含代码空间、编译空间、开发空间、安装空间四大版块。</p>
+<ul>
+<li>src: 代码空间（Source Space）</li>
+<li>build: 编译空间 (Build Space)</li>
+<li>devel: 开发空间 (Development Space)</li>
+<li><p>install: 安装空间 (Install Space)</p>
+<h2 id="2-工作空间的创建"><a href="#2-工作空间的创建" class="headerlink" title="2.工作空间的创建"></a>2.工作空间的创建</h2><p>Step1:创建工作空间:</p>
+<p>  $ mkdir -p ~/catkin_ws/src<br>  $ cd ~/catkin_ws/src<br>  $ catkin_init_workspace</p>
+</li>
+</ul>
+<p>Step2:编译工作空间</p>
+<pre><code>$ cd ~/catkin_ws/
+$ catkin_make
+</code></pre><p>Step3:设置环境变量</p>
+<pre><code>$ source devel/setup.bash
+</code></pre><p>Step4:检察环境变量</p>
+<pre><code>$ echo $ROS_PACKAGE_PATH
+</code></pre><h2 id="3-功能包的创建"><a href="#3-功能包的创建" class="headerlink" title="3.功能包的创建"></a>3.功能包的创建</h2><p>Step1:创建功能包</p>
+<pre><code>$ cd ~/Catkin_ws/src
+$ catkin_create_pkgtest_pkgstd_msgs rospy roscpp
+</code></pre><p>Step2:编译功能包</p>
+<pre><code>$ cd ~/catkin_ws
+$ catkin_make
+$ source ~/catkin_ws/devel/setup.bash
+</code></pre><p>同一个工作空间下是不允许存在多个同名功能包的，不同工作空间下是可以存在同名功能包的。</p>
+<h1 id="五、发布者Publish的编程实现"><a href="#五、发布者Publish的编程实现" class="headerlink" title="五、发布者Publish的编程实现"></a>五、发布者Publish的编程实现</h1><h2 id="1-话题模型"><a href="#1-话题模型" class="headerlink" title="1.话题模型"></a>1.话题模型</h2><div align=center>
+    <img src="/imgs/ROS的学习与使用/话题模型.png">
+</div>
+
+<h2 id="2-话题的发布"><a href="#2-话题的发布" class="headerlink" title="2.话题的发布"></a>2.话题的发布</h2><h3 id="1-创建发布者代码"><a href="#1-创建发布者代码" class="headerlink" title="(1).创建发布者代码"></a>(1).创建发布者代码</h3><p>创建发布者代码总共有以下几个步骤，分别是：</p>
+<ol>
+<li>初始化ROS节点；</li>
+<li>向ROS Master注册节点信息，其中包括话题名和话题中的消息类型；</li>
+<li>创建消息数据；</li>
+<li>按照一定频率循环发布消息；</li>
+</ol>
+<p>/<em><br>    语言：c++<br>    此例程将发布turtle/cmd_vel话题，消息类型为geometry_msgs::Twist
+</em>/</p>
+<pre><code>#include&lt;ros/ros.h&gt;
+#include&lt;geometry_msgs/Twist.h&gt;
+int main(int argc, char** argv)
+{
+    //ROS节点初始化
+    ros::init(argc, argv,&quot;&quot;);
+
+    //创建节点句柄
+    ros::Nodehandle;
+
+    //创建一个Publisher,发布名为/turtle1/cmd/vel的topic,消息类型为geometry_msgs::Twist,队列长度为10
+    ros::Publisher turtle_vel_pub = n.advertise&lt;geometry_msgs::Twist&gt;(&quot;/turtle/cmd_vel&quot;,10);
+
+    //设置循环的频率
+    ros::Rate_loop(10);
+
+    int count=0;
+    while (ros::ok){
+        //初始化geometry_msgs::Twist类型的消息
+        geometry_msgs::Twist vel_msg;
+        vel_msg.linear.x = 0.5;
+        vel_msg.angular.z = 0.2;
+
+        //发布消息
+        turtle_vel_pub.publish(vel_msg);
+        ROS_INFO(&quot;Publish turtle velocity command [%0.2f m/s, %0.2f rad/s]&quot;,vel_msg.linear.x,vel_msg.angular.z)
+
+        //按照时间频率循环
+        loop_rate.sleep();
+    }
+    return 0;
+} 
+</code></pre><p>/<em><br>    语言：python<br>    此例程将发布turtle/cmd_vel话题，消息类型为geometry_msgs::Twist
+</em>/</p>
+<pre><code>#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+import rospy
+from geometry_msgs.msg import Twist
+def velocity_publisher():
+    #ROS节点初始化
+    rospy.init_node(&quot;velocity_publisher&quot;, anonymous=True)
+    #创建一个Publisher,发布名为/turtle1/cmd_vel的topic,消息类型为geometry_msgs::Twist,队列长度为10
+    turtle_vel_pub = rospy.Publisher(&quot;/turtle/cmd_vel&quot;,Twist,queue_size=10)
+    #设置循环频率
+    rate = rospy.Rate(10)
+    while not rospy.is_shutdown():
+        #初始化geometry_msgs::Twist类型的消息
+        vel_msg = Twist()
+        vel_msg.linear.x = 0.5;
+        vel_msg.angular.z = 0.2;
+        #发布消息
+        turtle_vel_pub.publish(vel_msg);
+        rospy.loginfo(&quot;Publish turtle velocity command[%0.2f m/s, %0.2f rad/s]&quot;,vel_msg.linear.x,vel_msg.angular.z)
+        rate.sleep()    
+    if __name__ == &quot;__main__&quot;:
+        try:
+            velocity_publisher():
+        except rospy.ROSInterruptException:
+            pass
+</code></pre><h3 id="2-配置发布者代码编译规则"><a href="#2-配置发布者代码编译规则" class="headerlink" title="(2).配置发布者代码编译规则"></a>(2).配置发布者代码编译规则</h3><p>设置CMakeLists.txt中的编译规则：</p>
+<ol>
+<li>设置需要编译的代码和生成的可执行文件</li>
+<li><p>设置链接库</p>
+<p> add_executable(velocity_publisher src/velocity_publisher.cpp)<br> target_link_libraried(velocity_publisher${catkin_LIBRARIES})</p>
+</li>
+</ol>
+<h1 id="六、订阅者Subscriber的编程实现"><a href="#六、订阅者Subscriber的编程实现" class="headerlink" title="六、订阅者Subscriber的编程实现"></a>六、订阅者Subscriber的编程实现</h1><p>同样我们可以参考上一节的话题模型的图片。以及工作流程:初始化节点，创建句柄，创建订阅者，循环等待回调函数。</p>
+<p>/<em><br>    语言：c++<br>    此例程将发布turtle/pose话题，消息类型为:turtlesim::Pose
+</em>/</p>
+<pre><code>#include&lt;ros/ros.h&gt;
+#include&quot;turtlesim/Pose.h&quot;
+//收到订阅消息后的回调函数
+void poseCallback(const turtlesim::Pose::ConstPtr msg)
+{
+    //将收到的消息打印出来
+    ROS_INFO(&quot;Turtle pose: x:%0.6f, y:%0.6f&quot;, msg-&gt;x,msg-&gt;y);
+}
+int main(int argc, char **argv)
+{
+    //初始化ROS节点
+    ros::init(argc, argv, &quot;pose_subscriber&quot;);
+    //创建节点句柄
+    ros::NodeHandle n;
+    //创建一个Subsciber,订阅名为：/turtle/pose的topic,注册回调函数poseCallback
+    ros::Subscriber pose_sub = n.subscribe(&quot;turtle1/pose&quot;,10,poseCallback);
+    //循环等待回调函数
+    ros::spin();
+    return 0;
+}
+</code></pre><p>/<em><br>    语言：python<br>    此例程将发布turtle/pose话题，消息类型为:turtlesim::Pose
+</em>/</p>
+<pre><code>import rospy
+from turtlesim.msg import Pose
+def poseCallback(msg)
+{
+    rospy.loginfo(&quot;Turtle pose: x:%0.6f, y:%0.6f&quot;, msg.x,msg.y)
+}
+def pose_subscriber():
+    #ROS节点的初始化
+    rospy.init_node(&quot;pose_subscriber&quot;,anonymous=True)
+    #创建一个Subscriber,订阅名为/turtle1/pose的topic,注册回调函数poseCallback
+    rospy.Subscriber(&quot;/turtle1/pose&quot;,Pose,poseCallback)
+    #循环等待回调函数
+    rospy.spin()
+if __name__ = &quot;__main__&quot;:
+    pose_subscriber();
+</code></pre><h1 id="七、话题消息的定义与使用"><a href="#七、话题消息的定义与使用" class="headerlink" title="七、话题消息的定义与使用"></a>七、话题消息的定义与使用</h1><p>前面两节我们使用的消息类型都是ROS中已经给我们定义好的消息类型，但是很多时候实际工程需求中需要的消息类型是需要我们自己定义的。</p>
+<h2 id="1-自定义话题消息"><a href="#1-自定义话题消息" class="headerlink" title="1.自定义话题消息"></a>1.自定义话题消息</h2><p>Step1:定义msg文件<br>例如Person.msg</p>
+<pre><code>string name
+uint8 sex
+uint8 age
+uint unknow=0
+uint male = 1
+uint8 frmale = 2
+</code></pre><p>Step2:在package.xml中添加功能包依赖</p>
+<pre><code>&lt;build_depend&gt;message_generation&lt;/build_depend&gt;
+&lt;exec_depend&gt;message_runtime&lt;/exec_depend&gt;
+</code></pre><p>Step3:在CMakeLists.txt中添加编译选项</p>
+<pre><code>find_package(...... message_generation)
+add_message_files(FILES Person,msg)
+generate_messages(DEPENDENCIES std_msgs)
+catkin_package(...... message_runtime)
+</code></pre><p>Step4:编译生成语言相关文件。</p>
+<h2 id="2-在程序中调用我们自定义的消息"><a href="#2-在程序中调用我们自定义的消息" class="headerlink" title="2.在程序中调用我们自定义的消息"></a>2.在程序中调用我们自定义的消息</h2><p>按照上一节稍作修改即可。<br>此处需要说明的是，对于已经建立通信的两个节点之间，即使此时关闭NodeMaster,他们之间依然可以继续正常通信。此处给出一个简单的结果截图：</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/话题消息结果.png">
+</div>
+
+<h1 id="八、客户端Client的编程实现"><a href="#八、客户端Client的编程实现" class="headerlink" title="八、客户端Client的编程实现"></a>八、客户端Client的编程实现</h1><p>首先我们来了解以下“服务”这种消息类型的模型架构：</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/服务模型.png">
+</div>
+
+
+<p>接下来我们以产生新的小乌龟为例，介绍服务类型中客户端Client的代码编写<br>/<em><br>    例程使用语言：C++;<br>    该例程将请求：/spawn服务，服务数据类型：turtlesim::Spawn
+</em>/</p>
+<pre><code>#include&lt;ros/ros.h&gt;
+#include&lt;turtlesim/Spawn.h&gt;
+int main(int argc, char** argv)
+{
+    //初始化ROS节点
+    ros::init(argc,argv,&quot;turtle_spawn&quot;);
+    //创建句点节柄
+    ros::NodeHandle node;
+    //发现/spawn服务后，创建一个服务客户端，连接名为/spawn的Service
+    ros::service::waitForService(&quot;/spawn&quot;);
+    ros::ServiceClient add_turtle = node.serviceClient&lt;turtlesim::Spawn&gt;(&quot;/spwan&quot;);
+    //初始化turtlesim::spawn的请求数据
+    turtlesim::Spawn srv;
+    srv.request.x = 2.0;
+    srv.request.y = 2.0;
+    srv.request.name = &quot;turtle2&quot;;
+    //请求服务调用
+    ROS_INFO(&quot;Call service to spwan turtle[x:%0.6f, y:%0.6f, name:%s]&quot;,srv.request.x,srv.request.y);
+    add_turtle.call(srv);
+    ROS_INFO(&quot;Spawn turtle successfully [name:%s]&quot;,srv.request.name.c_str());
+}
+</code></pre><p>同时使用Python的大体过程也是类似的，在此也给出相应的代码:</p>
+<pre><code>#!.usr.bin.env python
+# -*- coding: utf-8 -*-
+# 该例程将请求/spawn服务，服务数据类型turtlesim::Spawn
+import sys
+import rospy
+from turtlesim.srv import Spawn
+
+def turtle_spawn():
+    #ROS节点初始化
+    rospy.init_node(&quot;turtle_spawn&quot;)
+    #发现/spawn服务后，创建一个客户端，连接名为.spwan的service
+    rospy.wait_for_service(&quot;/spawn&quot;)
+    try:
+        add_turtle = rospy.ServiceProxy(&quot;/spawn&quot;, Spawn)
+        #请求服务器调用，输入请求数据
+        response = add_turtle(3.0, 3.0, 0.0, &quot;turtle2&quot;)
+        return response.name
+    except rospy.ServiceException,e:
+        print(&quot;Service call failed: %d&quot;,%e)
+if __name__ = &quot;__main__&quot;:
+print &quot;Spawn turtle successfully [name:%s]&quot; %(turtle_spawn())
+</code></pre><p>代码编写完成后，记得在CMakeList.txt文件中修改编译规则:</p>
+<pre><code>add_excutable(turtle_spawn src/turtle_spawn.cpp)
+target_link_libraries(turtle_spawn ${catkin_LIBRARIES})
+</code></pre><p>于是在命令行中首先启动roscore,而后启动turtlesim,最后启动我们刚刚写好的文件即可得到如下结果：（我们在(2,2)位置产生了一只新的海龟。）</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/服务Client结果.png">
+</div>
+
+<h1 id="九、服务端Service的编程实现"><a href="#九、服务端Service的编程实现" class="headerlink" title="九、服务端Service的编程实现"></a>九、服务端Service的编程实现</h1><p>ROS中实现一个服务器主要有以下四个步骤:</p>
+<ol>
+<li>初始化ROS节点</li>
+<li>创建Server实例</li>
+<li>循环等待服务请求，进入回调函数</li>
+<li>在回调函数中完成服务功能的处理，并同时反馈应答数据</li>
+</ol>
+<p>接下来我们首先给出C++语言编写的程序代码：</p>
+<p>/<em><br>    例程使用语言：C++;<br>    该例程将执行/turtle_command服务，服务数据类型为:std_srvs/Trigger
+</em>/</p>
+<pre><code>#include&lt;ros/ros.h&gt;
+#include&lt;geometry_msgs/Twist.h&gt;
+#include&lt;std_srvs/Trigger.h&gt;
+//
+ros::Publisher turtle_vel_pub;
+bool pubCommand = false;
+//Service 回调函数，输入参数req，输出参数res
+bool commandCallback(std_srvs::Trigger::Request &amp;req,
+                    std::rsvs::Trigger::Response &amp;res)
+{
+    pubCommand = !pubCommand;
+    ROS_INFO(&quot;Publish turtle velocity command [%s]&quot;,pubCommand=true?&quot;Yes&quot;:&quot;No&quot;);
+    //
+    //设置反馈数据
+    res.success = true;
+    res.message = &quot;Change turtle command state!&quot;;
+    return true;
+}
+int main(int argc, char** argv)
+{
+    //ROS节点初始化
+    ros::init_node(argc,argv,&quot;turtle_command_service&quot;);
+    //创建节点句柄
+    ros::NodeHandle n;
+    //创建一个名为/turtle_command的server,注册回调函数为commandCallback
+    ros::ServiceServer command_service = n.advertiseService(&quot;/turtle_command&quot;,commandCallback);
+    //创建一个Publisher,发布名为/turtle/cmd_vel的topic，消息类型为geometry_msgs,队列长度为10；
+    turtle_vel_pub = n.advertise&lt;geometry_msgs::Twist&gt;(&quot;/turtle/cmd_vel&quot;,10);
+    //循环等待回调函数
+    ROS_INFO(&quot;Ready to receive turtle command.&quot;)；
+    //设置循环频率
+    ros::Rate_loop_rate(10);
+    //循环
+    while(ros::ok)
+    {
+        //查看一次回调函数
+        ros::spinOnce();
+        //如果标志为true,则发布速度指令
+        if(pubCommand)
+        {
+            geometry_msgs::Twist vel msg;
+            vel_msg.linear.x = 0.5;
+            vel_msg.angular.z = 0.2;
+            turtle_vel_pub.publish(vel_msg);
+        }
+        //按照循环频率延时
+        loop_rate.sleep();
+    }
+}
+</code></pre><div align=center>
+    <img src="/imgs/ROS的学习与使用/Server结果.png">
+</div>
+
+<p>同样，我们可以使用python来写相应程序<br>/<em><br>    例程使用语言：python;<br>    该例程将执行/turtle_command服务，服务数据类型为:std_srvs/Trigger
+</em>/</p>
+<pre><code>import rospy
+import thread,time
+from geometry_msgs.msg import Twist
+from std_srvs.srv import Trigger, TriggerResponse
+pubCommand = False;
+turtle_vel_pub = rospy.Publisher(&#39;/turtle1/cmd_vel&#39;, Twist, queue_size=10)
+def command_thread():   
+    while True:
+        if pubCommand:
+            vel_msg = Twist()
+            vel_msg.linear.x = 0.5
+            vel_msg.angular.z = 0.2
+            turtle_vel_pub.publish(vel_msg)
+
+        time.sleep(0.1)
+def commandCallback(req):
+    global pubCommand
+    pubCommand = bool(1-pubCommand)
+    # 显示请求数据
+    rospy.loginfo(&quot;Publish turtle velocity command![%d]&quot;, pubCommand)
+    # 反馈数据
+    return TriggerResponse(1, &quot;Change turtle command state!&quot;)
+def turtle_command_server():
+    # ROS节点初始化
+    rospy.init_node(&#39;turtle_command_server&#39;)
+    # 创建一个名为/turtle_command的server，注册回调函数commandCallback
+    s = rospy.Service(&#39;/turtle_command&#39;, Trigger, commandCallback)
+    # 循环等待回调函数
+    print &quot;Ready to receive turtle command.&quot;
+    thread.start_new_thread(command_thread, ())
+    rospy.spin()
+if __name__ == &quot;__main__&quot;:
+    turtle_command_server()
+</code></pre><h1 id="十、服务数据的类型与使用"><a href="#十、服务数据的类型与使用" class="headerlink" title="十、服务数据的类型与使用"></a>十、服务数据的类型与使用</h1><p>在实际的需求场景中，数据类型往往需要我们自己按照实际情况和需求构造。这就是本节课程的主要学习内容。</p>
+<h2 id="1-服务数据的定义"><a href="#1-服务数据的定义" class="headerlink" title="1.服务数据的定义"></a>1.服务数据的定义</h2><p>服务数据的定义使用srv文件，此文件的定义不依赖于语言。<br>例如：Person.srv；需要特别说明的服务类型的数据需要使用横线做区分，横线以上是request数据，横线以下是response数据,一定要注意横线。</p>
+<pre><code>string name
+uint8 age
+uint8 sex
+uint8 unknown=0
+uint8 male=1
+uint8 female=2
+---
+string result
+</code></pre><p>完成创建之后需要记得在package.xml中添加功能包依赖:</p>
+<pre><code>&lt;build_depend&gt;message_generation&lt;\build_depend&gt;
+&lt;exec_depend&gt;message_runtime&lt;\exec_depend&gt;
+</code></pre><p>在CMakeList.txt中添加编译选项:</p>
+<pre><code>find_package(... message_generation)
+add_service_files(FILES Person.srv)
+catkin_package(... message_runtime)
+</code></pre><p>生成相关的编译文件。此时会生成三个编译文件分别叫做Person.h,PersonRequest.h和PersonResponse.h,其中后两个分别是横线上下编译后所得到的结果，Person.h是后两者总和后的结果。</p>
+<p>接下来我们来编写相应的c++的Client和Server文件。</p>
+<p>/<em><br> Client端：<br> 语言：C++<br> 该例程将请求/show_person服务，服务数据类型learning_service::Person
+ </em>/</p>
+<pre><code>#include &lt;ros/ros.h&gt;
+#include &quot;learning_service/Person.h&quot;
+int main(int argc, char** argv)
+{
+    // 初始化ROS节点
+    ros::init(argc, argv, &quot;person_client&quot;);
+    // 创建节点句柄
+    ros::NodeHandle node;
+    // 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service
+    ros::service::waitForService(&quot;/show_person&quot;);
+    ros::ServiceClient person_client = node.serviceClient&lt;learning_service::Person&gt;(&quot;/show_person&quot;);
+    // 初始化learning_service::Person的请求数据
+    learning_service::Person srv;
+    srv.request.name = &quot;Tom&quot;;
+    srv.request.age  = 20;
+    srv.request.sex  = learning_service::Person::Request::male;
+    // 请求服务调用
+    ROS_INFO(&quot;Call service to show person[name:%s, age:%d, sex:%d]&quot;, 
+             srv.request.name.c_str(), srv.request.age, srv.request.sex);
+    person_client.call(srv);
+    // 显示服务调用结果
+    ROS_INFO(&quot;Show person result : %s&quot;, srv.response.result.c_str());
+    return 0;
+};
+</code></pre><p>/<em><br> Server端：<br> 语言：C++<br> 该例程将请求/show_person服务，服务数据类型learning_service::Person
+ </em>/</p>
+<pre><code>#include &lt;ros/ros.h&gt;
+#include &quot;learning_service/Person.h&quot;
+// service回调函数，输入参数req，输出参数res
+bool personCallback(learning_service::Person::Request  &amp;req,
+                    learning_service::Person::Response &amp;res)
+{
+    // 显示请求数据
+    ROS_INFO(&quot;Person: name:%s  age:%d  sex:%d&quot;, req.name.c_str(), req.age, req.sex);
+    // 设置反馈数据
+    res.result = &quot;OK&quot;;
+    return true;
+}
+int main(int argc, char **argv)
+{
+    // ROS节点初始化
+    ros::init(argc, argv, &quot;person_server&quot;);
+    // 创建节点句柄
+    ros::NodeHandle n;
+    // 创建一个名为/show_person的server，注册回调函数personCallback
+    ros::ServiceServer person_service = n.advertiseService(&quot;/show_person&quot;, personCallback);
+    // 循环等待回调函数
+    ROS_INFO(&quot;Ready to show person informtion.&quot;);
+    ros::spin();
+    return 0;
+}
+</code></pre><h1 id="十一、ROS中参数的使用与编程方法"><a href="#十一、ROS中参数的使用与编程方法" class="headerlink" title="十一、ROS中参数的使用与编程方法"></a>十一、ROS中参数的使用与编程方法</h1><p>首先对于参数服务器模型，我们可以参考下图：</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/参数服务器模型.png">
+</div>
+
+
+
+
       
 
       
@@ -278,7 +720,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">机器人控制</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/信息与通信//" class="article-tag-list-link color1">信息与通信</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/信息与通信/机器人控制//" class="article-tag-list-link color1">机器人控制</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -342,6 +810,15 @@
   
 <nav id="article-nav">
   
+    <a href="/2020/08/04/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2%E2%80%94%E2%80%94%E7%AC%AC%E4%BA%8C%E7%AB%A0%E2%80%94%E2%80%94%E5%A4%8D%E5%8F%98%E5%87%BD%E5%8F%8A%E5%85%B6%E8%A7%A3%E6%9E%90%E6%80%A7%E8%B4%A8%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          复变函数与积分变换——第二章——复变函及其解析性质数
+        
+      </div>
+    </a>
+  
   
     <a href="/2020/08/03/%E5%AD%A4%E7%8B%AC%E7%9A%84%E6%A0%B9%E6%BA%90/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">孤独的根源</div>
@@ -349,6 +826,9 @@
     </a>
   
 </nav>
+<span id="busuanzi_container_page_pv">
+        本文阅读量: <span id="busuanzi_value_page_pv"></span>次
+ </span>
 
 
 <aside class="wrap-side-operation">
@@ -364,6 +844,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、ROS简介"><span class="toc-number">1.</span> <span class="toc-text">一、ROS简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ROS是什么"><span class="toc-number">1.1.</span> <span class="toc-text">ROS是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ROS的历史"><span class="toc-number">1.2.</span> <span class="toc-text">ROS的历史</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、ROS的核心概念"><span class="toc-number">2.</span> <span class="toc-text">二、ROS的核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-节点与节点管理器"><span class="toc-number">2.1.</span> <span class="toc-text">1.节点与节点管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#节点（Node）————-执行单源"><span class="toc-number">2.1.1.</span> <span class="toc-text">节点（Node）———— 执行单源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点管理器（Node-Master）————-控制中心"><span class="toc-number">2.1.2.</span> <span class="toc-text">节点管理器（Node Master）———— 控制中心</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-话题通信"><span class="toc-number">2.2.</span> <span class="toc-text">2.话题通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#话题（Topic）————异步通信机制"><span class="toc-number">2.2.1.</span> <span class="toc-text">话题（Topic）————异步通信机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息（Message）————话题数据"><span class="toc-number">2.2.2.</span> <span class="toc-text">消息（Message）————话题数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-服务（Service）————同步通信机制"><span class="toc-number">2.3.</span> <span class="toc-text">3.服务（Service）————同步通信机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-参数-Parameter-————全局共享字典"><span class="toc-number">2.4.</span> <span class="toc-text">4. 参数(Parameter)————全局共享字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-文件系统"><span class="toc-number">2.5.</span> <span class="toc-text">5. 文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能包-Package"><span class="toc-number">2.5.1.</span> <span class="toc-text">功能包(Package)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能包清单-Package-manifest"><span class="toc-number">2.5.2.</span> <span class="toc-text">功能包清单(Package manifest)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元功能包-Meta-Package"><span class="toc-number">2.5.3.</span> <span class="toc-text">元功能包(Meta Package)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、ROS中的命令行工具"><span class="toc-number">3.</span> <span class="toc-text">三、ROS中的命令行工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、工作空间与工作包"><span class="toc-number">4.</span> <span class="toc-text">四、工作空间与工作包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-工作空间"><span class="toc-number">4.1.</span> <span class="toc-text">1.工作空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-工作空间的创建"><span class="toc-number">4.2.</span> <span class="toc-text">2.工作空间的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-功能包的创建"><span class="toc-number">4.3.</span> <span class="toc-text">3.功能包的创建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、发布者Publish的编程实现"><span class="toc-number">5.</span> <span class="toc-text">五、发布者Publish的编程实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-话题模型"><span class="toc-number">5.1.</span> <span class="toc-text">1.话题模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-话题的发布"><span class="toc-number">5.2.</span> <span class="toc-text">2.话题的发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建发布者代码"><span class="toc-number">5.2.1.</span> <span class="toc-text">(1).创建发布者代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置发布者代码编译规则"><span class="toc-number">5.2.2.</span> <span class="toc-text">(2).配置发布者代码编译规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、订阅者Subscriber的编程实现"><span class="toc-number">6.</span> <span class="toc-text">六、订阅者Subscriber的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、话题消息的定义与使用"><span class="toc-number">7.</span> <span class="toc-text">七、话题消息的定义与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-自定义话题消息"><span class="toc-number">7.1.</span> <span class="toc-text">1.自定义话题消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在程序中调用我们自定义的消息"><span class="toc-number">7.2.</span> <span class="toc-text">2.在程序中调用我们自定义的消息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、客户端Client的编程实现"><span class="toc-number">8.</span> <span class="toc-text">八、客户端Client的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、服务端Service的编程实现"><span class="toc-number">9.</span> <span class="toc-text">九、服务端Service的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、服务数据的类型与使用"><span class="toc-number">10.</span> <span class="toc-text">十、服务数据的类型与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-服务数据的定义"><span class="toc-number">10.1.</span> <span class="toc-text">1.服务数据的定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、ROS中参数的使用与编程方法"><span class="toc-number">11.</span> <span class="toc-text">十一、ROS中参数的使用与编程方法</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -377,7 +870,42 @@
 
   
 
+   
+        <script id="-mob-share" src="http://f1.webshare.mob.com/code/mob-share.js?appkey=30738b16d92ec"></script>
+   
+
   
+
+  
+    <section id="comments" class="comments">
+      <style>
+        .comments{margin:30px;padding:10px;background:#fff}
+        @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+      </style>
+      <div id="vcomment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '#vcomment',
+            notify: notify,
+            verify: verify,
+            app_id: "yoidN4HnUXiVSYaUxLnbz29c-gzGzoHsz",
+            app_key: "CeIqvJFUcw0hlK7CjlELaTYc",
+            placeholder: "友情提醒，留下正确的邮箱地址可以第一时间获取评论反馈",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: "10"
+    });
+</script>
+
+    </section>
+
+
 
 
           </div>
@@ -390,7 +918,11 @@
     		&copy; 2020 John Fine
     	</div>
       	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      		<a href="http://hexo.io/" target="_blank">BLOG</a>  Created <a href="https://github.com/litten/hexo-theme-yilia" target="_blank"></a> by John Fine
+      		<!-- # PV方式，单个用户连续点击 n 篇，记录 n 次记录值 -->
+			<span id="busuanzi_container_site_pv"> 总访问量: <span id="busuanzi_value_site_pv"></span> /</span>
+			<!-- # UV方式，单个用户连续点击 n 篇，记录 1 次记录值 -->
+			<span id="busuanzi_container_site_uv">  访客数:<span id="busuanzi_value_site_uv"></span></span>
       	</div>
     </div>
   </div>
@@ -438,6 +970,9 @@ MathJax.Hub.Queue(function() {
 <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
@@ -489,6 +1024,54 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">电子电路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">第一篇博客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">复变函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Folklore</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
