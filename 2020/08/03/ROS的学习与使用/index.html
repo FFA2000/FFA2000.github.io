@@ -25,10 +25,13 @@
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E8%AF%9D%E9%A2%98%E6%B6%88%E6%81%AF%E7%BB%93%E6%9E%9C.png">
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E6%9C%8D%E5%8A%A1%E6%A8%A1%E5%9E%8B.png">
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E6%9C%8D%E5%8A%A1Client%E7%BB%93%E6%9E%9C.png">
-<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/Server%E7%BB%93%E6%9E%9C.png">
 <meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%8F%82%E6%95%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%8F%82%E6%95%B0%E7%BB%93%E6%9E%9C.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E5%AE%9E%E4%BE%8B.png">
+<meta property="og:image" content="http://yoursite.com/imgs/ROS%E7%9A%84%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BD%BF%E7%94%A8/%E5%9D%90%E6%A0%87%E5%8F%98%E6%8D%A2%E6%B5%B7%E9%BE%9F.png">
 <meta property="article:published_time" content="2020-08-03T04:18:29.000Z">
-<meta property="article:modified_time" content="2020-08-14T16:25:02.583Z">
+<meta property="article:modified_time" content="2020-08-17T15:49:31.956Z">
 <meta property="article:author" content="John Fine">
 <meta property="article:tag" content="机器人控制">
 <meta name="twitter:card" content="summary">
@@ -294,12 +297,12 @@
 <li>src: 代码空间（Source Space）</li>
 <li>build: 编译空间 (Build Space)</li>
 <li>devel: 开发空间 (Development Space)</li>
-<li><p>install: 安装空间 (Install Space)</p>
-<h2 id="2-工作空间的创建"><a href="#2-工作空间的创建" class="headerlink" title="2.工作空间的创建"></a>2.工作空间的创建</h2><p>Step1:创建工作空间:</p>
-<p>  $ mkdir -p ~/catkin_ws/src<br>  $ cd ~/catkin_ws/src<br>  $ catkin_init_workspace</p>
-</li>
+<li>install: 安装空间 (Install Space)<h2 id="2-工作空间的创建"><a href="#2-工作空间的创建" class="headerlink" title="2.工作空间的创建"></a>2.工作空间的创建</h2>Step1:创建工作空间:</li>
 </ul>
-<p>Step2:编译工作空间</p>
+<pre><code>$ mkdir -p ~/catkin_ws/src
+$ cd ~/catkin_ws/src
+$ catkin_init_workspace
+</code></pre><p>Step2:编译工作空间</p>
 <pre><code>$ cd ~/catkin_ws/
 $ catkin_make
 </code></pre><p>Step3:设置环境变量</p>
@@ -327,39 +330,8 @@ $ source ~/catkin_ws/devel/setup.bash
 </ol>
 <p>/<em><br>    语言：c++<br>    此例程将发布turtle/cmd_vel话题，消息类型为geometry_msgs::Twist
 </em>/</p>
-<pre><code>#include&lt;ros/ros.h&gt;
-#include&lt;geometry_msgs/Twist.h&gt;
-int main(int argc, char** argv)
-{
-    //ROS节点初始化
-    ros::init(argc, argv,&quot;&quot;);
-
-    //创建节点句柄
-    ros::Nodehandle;
-
-    //创建一个Publisher,发布名为/turtle1/cmd/vel的topic,消息类型为geometry_msgs::Twist,队列长度为10
-    ros::Publisher turtle_vel_pub = n.advertise&lt;geometry_msgs::Twist&gt;(&quot;/turtle/cmd_vel&quot;,10);
-
-    //设置循环的频率
-    ros::Rate_loop(10);
-
-    int count=0;
-    while (ros::ok){
-        //初始化geometry_msgs::Twist类型的消息
-        geometry_msgs::Twist vel_msg;
-        vel_msg.linear.x = 0.5;
-        vel_msg.angular.z = 0.2;
-
-        //发布消息
-        turtle_vel_pub.publish(vel_msg);
-        ROS_INFO(&quot;Publish turtle velocity command [%0.2f m/s, %0.2f rad/s]&quot;,vel_msg.linear.x,vel_msg.angular.z)
-
-        //按照时间频率循环
-        loop_rate.sleep();
-    }
-    return 0;
-} 
-</code></pre><p>/<em><br>    语言：python<br>    此例程将发布turtle/cmd_vel话题，消息类型为geometry_msgs::Twist
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line">            <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;geometry_msgs/Twist.h&gt;</span></span></span><br><span class="line">            <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function">            </span>&#123;</span><br><span class="line">                <span class="comment">//ROS节点初始化</span></span><br><span class="line">                ros::init(argc, argv,<span class="string">""</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="comment">//创建节点句柄</span></span><br><span class="line">                ros::Nodehandle;</span><br><span class="line">                </span><br><span class="line">                <span class="comment">//创建一个Publisher,发布名为/turtle1/cmd/vel的topic,消息类型为geometry_msgs::Twist,队列长度为10</span></span><br><span class="line">                ros::Publisher turtle_vel_pub = n.advertise&lt;geometry_msgs::Twist&gt;(<span class="string">"/turtle/cmd_vel"</span>,<span class="number">10</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="comment">//设置循环的频率</span></span><br><span class="line">                ros::Rate_loop(<span class="number">10</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">while</span> (ros::ok)&#123;</span><br><span class="line">                    <span class="comment">//初始化geometry_msgs::Twist类型的消息</span></span><br><span class="line">                    geometry_msgs::Twist vel_msg;</span><br><span class="line">                    vel_msg.linear.x = <span class="number">0.5</span>;</span><br><span class="line">                    vel_msg.angular.z = <span class="number">0.2</span>;</span><br><span class="line">        </span><br><span class="line">                    <span class="comment">//发布消息</span></span><br><span class="line">                    turtle_vel_pub.publish(vel_msg);</span><br><span class="line">                    ROS_INFO(<span class="string">"Publish turtle velocity command [%0.2f m/s, %0.2f rad/s]"</span>,vel_msg.linear.x,vel_msg.angular.z)</span><br><span class="line">                    </span><br><span class="line">                    <span class="comment">//按照时间频率循环</span></span><br><span class="line">                    loop_rate.sleep();</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br></pre></td></tr></table></figure>
+<p>/<em><br>    语言：python<br>    此例程将发布turtle/cmd_vel话题，消息类型为geometry_msgs::Twist
 </em>/</p>
 <pre><code>#! /usr/bin/env python
 # -*- coding: utf-8 -*-
@@ -396,44 +368,10 @@ def velocity_publisher():
 <h1 id="六、订阅者Subscriber的编程实现"><a href="#六、订阅者Subscriber的编程实现" class="headerlink" title="六、订阅者Subscriber的编程实现"></a>六、订阅者Subscriber的编程实现</h1><p>同样我们可以参考上一节的话题模型的图片。以及工作流程:初始化节点，创建句柄，创建订阅者，循环等待回调函数。</p>
 <p>/<em><br>    语言：c++<br>    此例程将发布turtle/pose话题，消息类型为:turtlesim::Pose
 </em>/</p>
-<pre><code>#include&lt;ros/ros.h&gt;
-#include&quot;turtlesim/Pose.h&quot;
-//收到订阅消息后的回调函数
-void poseCallback(const turtlesim::Pose::ConstPtr msg)
-{
-    //将收到的消息打印出来
-    ROS_INFO(&quot;Turtle pose: x:%0.6f, y:%0.6f&quot;, msg-&gt;x,msg-&gt;y);
-}
-int main(int argc, char **argv)
-{
-    //初始化ROS节点
-    ros::init(argc, argv, &quot;pose_subscriber&quot;);
-    //创建节点句柄
-    ros::NodeHandle n;
-    //创建一个Subsciber,订阅名为：/turtle/pose的topic,注册回调函数poseCallback
-    ros::Subscriber pose_sub = n.subscribe(&quot;turtle1/pose&quot;,10,poseCallback);
-    //循环等待回调函数
-    ros::spin();
-    return 0;
-}
-</code></pre><p>/<em><br>    语言：python<br>    此例程将发布turtle/pose话题，消息类型为:turtlesim::Pose
-</em>/</p>
-<pre><code>import rospy
-from turtlesim.msg import Pose
-def poseCallback(msg)
-{
-    rospy.loginfo(&quot;Turtle pose: x:%0.6f, y:%0.6f&quot;, msg.x,msg.y)
-}
-def pose_subscriber():
-    #ROS节点的初始化
-    rospy.init_node(&quot;pose_subscriber&quot;,anonymous=True)
-    #创建一个Subscriber,订阅名为/turtle1/pose的topic,注册回调函数poseCallback
-    rospy.Subscriber(&quot;/turtle1/pose&quot;,Pose,poseCallback)
-    #循环等待回调函数
-    rospy.spin()
-if __name__ = &quot;__main__&quot;:
-    pose_subscriber();
-</code></pre><h1 id="七、话题消息的定义与使用"><a href="#七、话题消息的定义与使用" class="headerlink" title="七、话题消息的定义与使用"></a>七、话题消息的定义与使用</h1><p>前面两节我们使用的消息类型都是ROS中已经给我们定义好的消息类型，但是很多时候实际工程需求中需要的消息类型是需要我们自己定义的。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">"turtlesim/Pose.h"</span></span></span><br><span class="line"><span class="comment">//收到订阅消息后的回调函数</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">poseCallback</span><span class="params">(<span class="keyword">const</span> turtlesim::Pose::ConstPtr msg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//将收到的消息打印出来</span></span><br><span class="line">    ROS_INFO(<span class="string">"Turtle pose: x:%0.6f, y:%0.6f"</span>, msg-&gt;x,msg-&gt;y);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//初始化ROS节点</span></span><br><span class="line">    ros::init(argc, argv, <span class="string">"pose_subscriber"</span>);</span><br><span class="line">    <span class="comment">//创建节点句柄</span></span><br><span class="line">    ros::NodeHandle n;</span><br><span class="line">    <span class="comment">//创建一个Subsciber,订阅名为：/turtle/pose的topic,注册回调函数poseCallback</span></span><br><span class="line">    ros::Subscriber pose_sub = n.subscribe(<span class="string">"turtle1/pose"</span>,<span class="number">10</span>,poseCallback);</span><br><span class="line">    <span class="comment">//循环等待回调函数</span></span><br><span class="line">    ros::spin();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>/<em><br>    语言：python<br>    此例程将发布turtle/pose话题，消息类型为:turtlesim::Pose
+</em>/<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">from</span> turtlesim.msg <span class="keyword">import</span> Pose</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">poseCallback</span><span class="params">(msg)</span></span></span><br><span class="line">&#123;</span><br><span class="line">    rospy.loginfo(<span class="string">"Turtle pose: x:%0.6f, y:%0.6f"</span>, msg.x,msg.y)</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">pose_subscriber</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment">#ROS节点的初始化</span></span><br><span class="line">    rospy.init_node(<span class="string">"pose_subscriber"</span>,anonymous=<span class="literal">True</span>)</span><br><span class="line">    <span class="comment">#创建一个Subscriber,订阅名为/turtle1/pose的topic,注册回调函数poseCallback</span></span><br><span class="line">    rospy.Subscriber(<span class="string">"/turtle1/pose"</span>,Pose,poseCallback)</span><br><span class="line">    <span class="comment">#循环等待回调函数</span></span><br><span class="line">    rospy.spin()</span><br><span class="line"><span class="keyword">if</span> __name__ = <span class="string">"__main__"</span>:</span><br><span class="line">    pose_subscriber();</span><br></pre></td></tr></table></figure></p>
+<h1 id="七、话题消息的定义与使用"><a href="#七、话题消息的定义与使用" class="headerlink" title="七、话题消息的定义与使用"></a>七、话题消息的定义与使用</h1><p>前面两节我们使用的消息类型都是ROS中已经给我们定义好的消息类型，但是很多时候实际工程需求中需要的消息类型是需要我们自己定义的。</p>
 <h2 id="1-自定义话题消息"><a href="#1-自定义话题消息" class="headerlink" title="1.自定义话题消息"></a>1.自定义话题消息</h2><p>Step1:定义msg文件<br>例如Person.msg</p>
 <pre><code>string name
 uint8 sex
@@ -462,51 +400,8 @@ catkin_package(...... message_runtime)
 
 
 <p>接下来我们以产生新的小乌龟为例，介绍服务类型中客户端Client的代码编写<br>/<em><br>    例程使用语言：C++;<br>    该例程将请求：/spawn服务，服务数据类型：turtlesim::Spawn
-</em>/</p>
-<pre><code>#include&lt;ros/ros.h&gt;
-#include&lt;turtlesim/Spawn.h&gt;
-int main(int argc, char** argv)
-{
-    //初始化ROS节点
-    ros::init(argc,argv,&quot;turtle_spawn&quot;);
-    //创建句点节柄
-    ros::NodeHandle node;
-    //发现/spawn服务后，创建一个服务客户端，连接名为/spawn的Service
-    ros::service::waitForService(&quot;/spawn&quot;);
-    ros::ServiceClient add_turtle = node.serviceClient&lt;turtlesim::Spawn&gt;(&quot;/spwan&quot;);
-    //初始化turtlesim::spawn的请求数据
-    turtlesim::Spawn srv;
-    srv.request.x = 2.0;
-    srv.request.y = 2.0;
-    srv.request.name = &quot;turtle2&quot;;
-    //请求服务调用
-    ROS_INFO(&quot;Call service to spwan turtle[x:%0.6f, y:%0.6f, name:%s]&quot;,srv.request.x,srv.request.y);
-    add_turtle.call(srv);
-    ROS_INFO(&quot;Spawn turtle successfully [name:%s]&quot;,srv.request.name.c_str());
-}
-</code></pre><p>同时使用Python的大体过程也是类似的，在此也给出相应的代码:</p>
-<pre><code>#!.usr.bin.env python
-# -*- coding: utf-8 -*-
-# 该例程将请求/spawn服务，服务数据类型turtlesim::Spawn
-import sys
-import rospy
-from turtlesim.srv import Spawn
-
-def turtle_spawn():
-    #ROS节点初始化
-    rospy.init_node(&quot;turtle_spawn&quot;)
-    #发现/spawn服务后，创建一个客户端，连接名为.spwan的service
-    rospy.wait_for_service(&quot;/spawn&quot;)
-    try:
-        add_turtle = rospy.ServiceProxy(&quot;/spawn&quot;, Spawn)
-        #请求服务器调用，输入请求数据
-        response = add_turtle(3.0, 3.0, 0.0, &quot;turtle2&quot;)
-        return response.name
-    except rospy.ServiceException,e:
-        print(&quot;Service call failed: %d&quot;,%e)
-if __name__ = &quot;__main__&quot;:
-print &quot;Spawn turtle successfully [name:%s]&quot; %(turtle_spawn())
-</code></pre><p>代码编写完成后，记得在CMakeList.txt文件中修改编译规则:</p>
+</em>/<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;turtlesim/Spawn.h&gt;</span></span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//初始化ROS节点</span></span><br><span class="line">        ros::init(argc,argv,<span class="string">"turtle_spawn"</span>);</span><br><span class="line">        <span class="comment">//创建句点节柄</span></span><br><span class="line">        ros::NodeHandle node;</span><br><span class="line">        <span class="comment">//发现/spawn服务后，创建一个服务客户端，连接名为/spawn的Service</span></span><br><span class="line">        ros::service::waitForService(<span class="string">"/spawn"</span>);</span><br><span class="line">        ros::ServiceClient add_turtle = node.serviceClient&lt;turtlesim::Spawn&gt;(<span class="string">"/spwan"</span>);</span><br><span class="line">        <span class="comment">//初始化turtlesim::spawn的请求数据</span></span><br><span class="line">        turtlesim::Spawn srv;</span><br><span class="line">        srv.request.x = <span class="number">2.0</span>;</span><br><span class="line">        srv.request.y = <span class="number">2.0</span>;</span><br><span class="line">        srv.request.name = <span class="string">"turtle2"</span>;</span><br><span class="line">        <span class="comment">//请求服务调用</span></span><br><span class="line">        ROS_INFO(<span class="string">"Call service to spwan turtle[x:%0.6f, y:%0.6f, name:%s]"</span>,srv.request.x,srv.request.y);</span><br><span class="line">        add_turtle.call(srv);</span><br><span class="line">        ROS_INFO(<span class="string">"Spawn turtle successfully [name:%s]"</span>,srv.request.name.c_str());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">同时使用Python的大体过程也是类似的，在此也给出相应的代码:</span><br><span class="line">    </span><br><span class="line">    #!.usr.bin.env python</span><br><span class="line">    # -*- coding: utf<span class="number">-8</span> -*-</span><br><span class="line">    # 该例程将请求/spawn服务，服务数据类型turtlesim::Spawn</span><br><span class="line">    <span class="keyword">import</span> sys</span><br><span class="line">    <span class="keyword">import</span> rospy</span><br><span class="line">    from turtlesim.srv <span class="keyword">import</span> Spawn</span><br><span class="line">      </span><br><span class="line">    <span class="function">def <span class="title">turtle_spawn</span><span class="params">()</span>:</span></span><br><span class="line">        #ROS节点初始化</span><br><span class="line">        rospy.init_node(<span class="string">"turtle_spawn"</span>)</span><br><span class="line">        #发现/spawn服务后，创建一个客户端，连接名为.spwan的service</span><br><span class="line">        rospy.wait_for_service(<span class="string">"/spawn"</span>)</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            add_turtle = rospy.ServiceProxy(<span class="string">"/spawn"</span>, Spawn)</span><br><span class="line">            #请求服务器调用，输入请求数据</span><br><span class="line">            response = add_turtle(<span class="number">3.0</span>, <span class="number">3.0</span>, <span class="number">0.0</span>, <span class="string">"turtle2"</span>)</span><br><span class="line">            <span class="keyword">return</span> response.name</span><br><span class="line">        except rospy.ServiceException,e:</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"Service call failed: %d"</span>,%e)</span><br><span class="line">    <span class="keyword">if</span> __name__ = <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="built_in">print</span> <span class="string">"Spawn turtle successfully [name:%s]"</span> %(turtle_spawn())</span><br></pre></td></tr></table></figure></p>
+<p>代码编写完成后，记得在CMakeList.txt文件中修改编译规则:</p>
 <pre><code>add_excutable(turtle_spawn src/turtle_spawn.cpp)
 target_link_libraries(turtle_spawn ${catkin_LIBRARIES})
 </code></pre><p>于是在命令行中首先启动roscore,而后启动turtlesim,最后启动我们刚刚写好的文件即可得到如下结果：（我们在(2,2)位置产生了一只新的海龟。）</p>
@@ -523,96 +418,9 @@ target_link_libraries(turtle_spawn ${catkin_LIBRARIES})
 </ol>
 <p>接下来我们首先给出C++语言编写的程序代码：</p>
 <p>/<em><br>    例程使用语言：C++;<br>    该例程将执行/turtle_command服务，服务数据类型为:std_srvs/Trigger
-</em>/</p>
-<pre><code>#include&lt;ros/ros.h&gt;
-#include&lt;geometry_msgs/Twist.h&gt;
-#include&lt;std_srvs/Trigger.h&gt;
-//
-ros::Publisher turtle_vel_pub;
-bool pubCommand = false;
-//Service 回调函数，输入参数req，输出参数res
-bool commandCallback(std_srvs::Trigger::Request &amp;req,
-                    std::rsvs::Trigger::Response &amp;res)
-{
-    pubCommand = !pubCommand;
-    ROS_INFO(&quot;Publish turtle velocity command [%s]&quot;,pubCommand=true?&quot;Yes&quot;:&quot;No&quot;);
-    //
-    //设置反馈数据
-    res.success = true;
-    res.message = &quot;Change turtle command state!&quot;;
-    return true;
-}
-int main(int argc, char** argv)
-{
-    //ROS节点初始化
-    ros::init_node(argc,argv,&quot;turtle_command_service&quot;);
-    //创建节点句柄
-    ros::NodeHandle n;
-    //创建一个名为/turtle_command的server,注册回调函数为commandCallback
-    ros::ServiceServer command_service = n.advertiseService(&quot;/turtle_command&quot;,commandCallback);
-    //创建一个Publisher,发布名为/turtle/cmd_vel的topic，消息类型为geometry_msgs,队列长度为10；
-    turtle_vel_pub = n.advertise&lt;geometry_msgs::Twist&gt;(&quot;/turtle/cmd_vel&quot;,10);
-    //循环等待回调函数
-    ROS_INFO(&quot;Ready to receive turtle command.&quot;)；
-    //设置循环频率
-    ros::Rate_loop_rate(10);
-    //循环
-    while(ros::ok)
-    {
-        //查看一次回调函数
-        ros::spinOnce();
-        //如果标志为true,则发布速度指令
-        if(pubCommand)
-        {
-            geometry_msgs::Twist vel msg;
-            vel_msg.linear.x = 0.5;
-            vel_msg.angular.z = 0.2;
-            turtle_vel_pub.publish(vel_msg);
-        }
-        //按照循环频率延时
-        loop_rate.sleep();
-    }
-}
-</code></pre><div align=center>
-    <img src="/imgs/ROS的学习与使用/Server结果.png">
-</div>
-
-<p>同样，我们可以使用python来写相应程序<br>/<em><br>    例程使用语言：python;<br>    该例程将执行/turtle_command服务，服务数据类型为:std_srvs/Trigger
-</em>/</p>
-<pre><code>import rospy
-import thread,time
-from geometry_msgs.msg import Twist
-from std_srvs.srv import Trigger, TriggerResponse
-pubCommand = False;
-turtle_vel_pub = rospy.Publisher(&#39;/turtle1/cmd_vel&#39;, Twist, queue_size=10)
-def command_thread():   
-    while True:
-        if pubCommand:
-            vel_msg = Twist()
-            vel_msg.linear.x = 0.5
-            vel_msg.angular.z = 0.2
-            turtle_vel_pub.publish(vel_msg)
-
-        time.sleep(0.1)
-def commandCallback(req):
-    global pubCommand
-    pubCommand = bool(1-pubCommand)
-    # 显示请求数据
-    rospy.loginfo(&quot;Publish turtle velocity command![%d]&quot;, pubCommand)
-    # 反馈数据
-    return TriggerResponse(1, &quot;Change turtle command state!&quot;)
-def turtle_command_server():
-    # ROS节点初始化
-    rospy.init_node(&#39;turtle_command_server&#39;)
-    # 创建一个名为/turtle_command的server，注册回调函数commandCallback
-    s = rospy.Service(&#39;/turtle_command&#39;, Trigger, commandCallback)
-    # 循环等待回调函数
-    print &quot;Ready to receive turtle command.&quot;
-    thread.start_new_thread(command_thread, ())
-    rospy.spin()
-if __name__ == &quot;__main__&quot;:
-    turtle_command_server()
-</code></pre><h1 id="十、服务数据的类型与使用"><a href="#十、服务数据的类型与使用" class="headerlink" title="十、服务数据的类型与使用"></a>十、服务数据的类型与使用</h1><p>在实际的需求场景中，数据类型往往需要我们自己按照实际情况和需求构造。这就是本节课程的主要学习内容。</p>
+</em>/<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">    <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;geometry_msgs/Twist.h&gt;</span></span></span><br><span class="line">    <span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;std_srvs/Trigger.h&gt;</span></span></span><br><span class="line">    <span class="comment">//</span></span><br><span class="line">    ros::Publisher turtle_vel_pub;</span><br><span class="line">    <span class="keyword">bool</span> pubCommand = <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">//Service 回调函数，输入参数req，输出参数res</span></span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">commandCallback</span><span class="params">(std_srvs::Trigger::Request &amp;req,</span></span></span><br><span class="line"><span class="function"><span class="params">                        <span class="built_in">std</span>::rsvs::Trigger::Response &amp;res)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        pubCommand = !pubCommand;</span><br><span class="line">        ROS_INFO(<span class="string">"Publish turtle velocity command [%s]"</span>,pubCommand=<span class="literal">true</span>?<span class="string">"Yes"</span>:<span class="string">"No"</span>);</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">        <span class="comment">//设置反馈数据</span></span><br><span class="line">        res.success = <span class="literal">true</span>;</span><br><span class="line">        res.message = <span class="string">"Change turtle command state!"</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">//ROS节点初始化</span></span><br><span class="line">        ros::init_node(argc,argv,<span class="string">"turtle_command_service"</span>);</span><br><span class="line">        <span class="comment">//创建节点句柄</span></span><br><span class="line">        ros::NodeHandle n;</span><br><span class="line">        <span class="comment">//创建一个名为/turtle_command的server,注册回调函数为commandCallback</span></span><br><span class="line">        ros::ServiceServer command_service = n.advertiseService(<span class="string">"/turtle_command"</span>,commandCallback);</span><br><span class="line">        <span class="comment">//创建一个Publisher,发布名为/turtle/cmd_vel的topic，消息类型为geometry_msgs,队列长度为10；</span></span><br><span class="line">        turtle_vel_pub = n.advertise&lt;geometry_msgs::Twist&gt;(<span class="string">"/turtle/cmd_vel"</span>,<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//循环等待回调函数</span></span><br><span class="line">        ROS_INFO(<span class="string">"Ready to receive turtle command."</span>)；</span><br><span class="line">        <span class="comment">//设置循环频率</span></span><br><span class="line">        ros::Rate_loop_rate(<span class="number">10</span>);</span><br><span class="line">        <span class="comment">//循环</span></span><br><span class="line">        <span class="keyword">while</span>(ros::ok)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//查看一次回调函数</span></span><br><span class="line">            ros::spinOnce();</span><br><span class="line">            <span class="comment">//如果标志为true,则发布速度指令</span></span><br><span class="line">            <span class="keyword">if</span>(pubCommand)</span><br><span class="line">            &#123;</span><br><span class="line">                geometry_msgs::Twist vel msg;</span><br><span class="line">                vel_msg.linear.x = <span class="number">0.5</span>;</span><br><span class="line">                vel_msg.angular.z = <span class="number">0.2</span>;</span><br><span class="line">                turtle_vel_pub.publish(vel_msg);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//按照循环频率延时</span></span><br><span class="line">            loop_rate.sleep();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&lt;div align=center&gt;</span><br><span class="line">    &lt;img src=<span class="string">"/imgs/ROS的学习与使用/Server结果.png"</span>&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>同样，我们可以使用python来写相应程序<br>/<em><br>    例程使用语言：python;<br>    该例程将执行/turtle_command服务，服务数据类型为:std_srvs/Trigger
+</em>/<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">import</span> thread,time</span><br><span class="line"><span class="keyword">from</span> geometry_msgs.msg <span class="keyword">import</span> Twist</span><br><span class="line"><span class="keyword">from</span> std_srvs.srv <span class="keyword">import</span> Trigger, TriggerResponse</span><br><span class="line">pubCommand = <span class="literal">False</span>;</span><br><span class="line">turtle_vel_pub = rospy.Publisher(<span class="string">'/turtle1/cmd_vel'</span>, Twist, queue_size=<span class="number">10</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">command_thread</span><span class="params">()</span>:</span>   </span><br><span class="line">    <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">        <span class="keyword">if</span> pubCommand:</span><br><span class="line">            vel_msg = Twist()</span><br><span class="line">            vel_msg.linear.x = <span class="number">0.5</span></span><br><span class="line">            vel_msg.angular.z = <span class="number">0.2</span></span><br><span class="line">            turtle_vel_pub.publish(vel_msg)</span><br><span class="line">            </span><br><span class="line">        time.sleep(<span class="number">0.1</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">commandCallback</span><span class="params">(req)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> pubCommand</span><br><span class="line">    pubCommand = bool(<span class="number">1</span>-pubCommand)</span><br><span class="line">    <span class="comment"># 显示请求数据</span></span><br><span class="line">    rospy.loginfo(<span class="string">"Publish turtle velocity command![%d]"</span>, pubCommand)</span><br><span class="line">    <span class="comment"># 反馈数据</span></span><br><span class="line">    <span class="keyword">return</span> TriggerResponse(<span class="number">1</span>, <span class="string">"Change turtle command state!"</span>)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">turtle_command_server</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># ROS节点初始化</span></span><br><span class="line">    rospy.init_node(<span class="string">'turtle_command_server'</span>)</span><br><span class="line">    <span class="comment"># 创建一个名为/turtle_command的server，注册回调函数commandCallback</span></span><br><span class="line">    s = rospy.Service(<span class="string">'/turtle_command'</span>, Trigger, commandCallback)</span><br><span class="line">    <span class="comment"># 循环等待回调函数</span></span><br><span class="line">    <span class="keyword">print</span> <span class="string">"Ready to receive turtle command."</span></span><br><span class="line">    thread.start_new_thread(command_thread, ())</span><br><span class="line">    rospy.spin()</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    turtle_command_server()</span><br></pre></td></tr></table></figure></p>
+<h1 id="十、服务数据的类型与使用"><a href="#十、服务数据的类型与使用" class="headerlink" title="十、服务数据的类型与使用"></a>十、服务数据的类型与使用</h1><p>在实际的需求场景中，数据类型往往需要我们自己按照实际情况和需求构造。这就是本节课程的主要学习内容。</p>
 <h2 id="1-服务数据的定义"><a href="#1-服务数据的定义" class="headerlink" title="1.服务数据的定义"></a>1.服务数据的定义</h2><p>服务数据的定义使用srv文件，此文件的定义不依赖于语言。<br>例如：Person.srv；需要特别说明的服务类型的数据需要使用横线做区分，横线以上是request数据，横线以下是response数据,一定要注意横线。</p>
 <pre><code>string name
 uint8 age
@@ -632,66 +440,71 @@ catkin_package(... message_runtime)
 </code></pre><p>生成相关的编译文件。此时会生成三个编译文件分别叫做Person.h,PersonRequest.h和PersonResponse.h,其中后两个分别是横线上下编译后所得到的结果，Person.h是后两者总和后的结果。</p>
 <p>接下来我们来编写相应的c++的Client和Server文件。</p>
 <p>/<em><br> Client端：<br> 语言：C++<br> 该例程将请求/show_person服务，服务数据类型learning_service::Person
- </em>/</p>
-<pre><code>#include &lt;ros/ros.h&gt;
-#include &quot;learning_service/Person.h&quot;
-int main(int argc, char** argv)
-{
-    // 初始化ROS节点
-    ros::init(argc, argv, &quot;person_client&quot;);
-    // 创建节点句柄
-    ros::NodeHandle node;
-    // 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service
-    ros::service::waitForService(&quot;/show_person&quot;);
-    ros::ServiceClient person_client = node.serviceClient&lt;learning_service::Person&gt;(&quot;/show_person&quot;);
-    // 初始化learning_service::Person的请求数据
-    learning_service::Person srv;
-    srv.request.name = &quot;Tom&quot;;
-    srv.request.age  = 20;
-    srv.request.sex  = learning_service::Person::Request::male;
-    // 请求服务调用
-    ROS_INFO(&quot;Call service to show person[name:%s, age:%d, sex:%d]&quot;, 
-             srv.request.name.c_str(), srv.request.age, srv.request.sex);
-    person_client.call(srv);
-    // 显示服务调用结果
-    ROS_INFO(&quot;Show person result : %s&quot;, srv.response.result.c_str());
-    return 0;
-};
-</code></pre><p>/<em><br> Server端：<br> 语言：C++<br> 该例程将请求/show_person服务，服务数据类型learning_service::Person
- </em>/</p>
-<pre><code>#include &lt;ros/ros.h&gt;
-#include &quot;learning_service/Person.h&quot;
-// service回调函数，输入参数req，输出参数res
-bool personCallback(learning_service::Person::Request  &amp;req,
-                    learning_service::Person::Response &amp;res)
-{
-    // 显示请求数据
-    ROS_INFO(&quot;Person: name:%s  age:%d  sex:%d&quot;, req.name.c_str(), req.age, req.sex);
-    // 设置反馈数据
-    res.result = &quot;OK&quot;;
-    return true;
-}
-int main(int argc, char **argv)
-{
-    // ROS节点初始化
-    ros::init(argc, argv, &quot;person_server&quot;);
-    // 创建节点句柄
-    ros::NodeHandle n;
-    // 创建一个名为/show_person的server，注册回调函数personCallback
-    ros::ServiceServer person_service = n.advertiseService(&quot;/show_person&quot;, personCallback);
-    // 循环等待回调函数
-    ROS_INFO(&quot;Ready to show person informtion.&quot;);
-    ros::spin();
-    return 0;
-}
-</code></pre><h1 id="十一、ROS中参数的使用与编程方法"><a href="#十一、ROS中参数的使用与编程方法" class="headerlink" title="十一、ROS中参数的使用与编程方法"></a>十一、ROS中参数的使用与编程方法</h1><p>首先对于参数服务器模型，我们可以参考下图：</p>
+ </em>/<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"learning_service/Person.h"</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 初始化ROS节点</span></span><br><span class="line">    ros::init(argc, argv, <span class="string">"person_client"</span>);</span><br><span class="line">    <span class="comment">// 创建节点句柄</span></span><br><span class="line">    ros::NodeHandle node;</span><br><span class="line">    <span class="comment">// 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service</span></span><br><span class="line">    ros::service::waitForService(<span class="string">"/show_person"</span>);</span><br><span class="line">    ros::ServiceClient person_client = node.serviceClient&lt;learning_service::Person&gt;(<span class="string">"/show_person"</span>);</span><br><span class="line">    <span class="comment">// 初始化learning_service::Person的请求数据</span></span><br><span class="line">    learning_service::Person srv;</span><br><span class="line">    srv.request.name = <span class="string">"Tom"</span>;</span><br><span class="line">    srv.request.age  = <span class="number">20</span>;</span><br><span class="line">    srv.request.sex  = learning_service::Person::Request::male;</span><br><span class="line">    <span class="comment">// 请求服务调用</span></span><br><span class="line">    ROS_INFO(<span class="string">"Call service to show person[name:%s, age:%d, sex:%d]"</span>, </span><br><span class="line">             srv.request.name.c_str(), srv.request.age, srv.request.sex);</span><br><span class="line">    person_client.call(srv);</span><br><span class="line">    <span class="comment">// 显示服务调用结果</span></span><br><span class="line">    ROS_INFO(<span class="string">"Show person result : %s"</span>, srv.response.result.c_str());</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><br>/<em><br> Server端：<br> 语言：C++<br> 该例程将请求/show_person服务，服务数据类型learning_service::Person
+ </em>/<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"learning_service/Person.h"</span></span></span><br><span class="line"><span class="comment">// service回调函数，输入参数req，输出参数res</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">personCallback</span><span class="params">(learning_service::Person::Request  &amp;req,</span></span></span><br><span class="line"><span class="function"><span class="params">                    learning_service::Person::Response &amp;res)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 显示请求数据</span></span><br><span class="line">    ROS_INFO(<span class="string">"Person: name:%s  age:%d  sex:%d"</span>, req.name.c_str(), req.age, req.sex);</span><br><span class="line">    <span class="comment">// 设置反馈数据</span></span><br><span class="line">    res.result = <span class="string">"OK"</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// ROS节点初始化</span></span><br><span class="line">    ros::init(argc, argv, <span class="string">"person_server"</span>);</span><br><span class="line">    <span class="comment">// 创建节点句柄</span></span><br><span class="line">    ros::NodeHandle n;</span><br><span class="line">    <span class="comment">// 创建一个名为/show_person的server，注册回调函数personCallback</span></span><br><span class="line">    ros::ServiceServer person_service = n.advertiseService(<span class="string">"/show_person"</span>, personCallback);</span><br><span class="line">    <span class="comment">// 循环等待回调函数</span></span><br><span class="line">    ROS_INFO(<span class="string">"Ready to show person informtion."</span>);</span><br><span class="line">    ros::spin();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="十一、ROS中参数的使用与编程方法"><a href="#十一、ROS中参数的使用与编程方法" class="headerlink" title="十一、ROS中参数的使用与编程方法"></a>十一、ROS中参数的使用与编程方法</h1><p>首先对于参数服务器模型，我们可以参考下图：</p>
 <div align=center>
     <img src="/imgs/ROS的学习与使用/参数服务器模型.png">
 </div>
 
+<p>首先我们介绍参数文件，参数文件常常以yaml的形式存在，我们也称其为参数文件，如下：</p>
+<pre><code>background_b:255
+background_g:86
+background_r:69
+rosdistro:&#39;melodic&#39;
+roslaunch:
+    uris:{host_hcx_vpc__43764:&#39;http://hcx-vpc:43763/&#39;}
+rosversion:&#39;1.14.3&#39;
+run_id:285y235234hfjdg9375348y
+</code></pre><p>接下来我们介绍ros中参数命令：</p>
+<pre><code>rosparam list: 列出当前有多少参数
+rosparam get param_key: 显示某个参数值
+rosparam set param_key param_value: 设置某个参数值
+rosparam dump file_name: 保存参数到文件
+rosparam load file_name: 从文件读取参数
+rosparam delete param_key: 删除参数
+</code></pre><p>接下来我们来使用代码设置和获取参数：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 该例程设置/读取海龟例程中的参数</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;std_srvs/Empty.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> red, green, blue;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ROS节点初始化</span></span><br><span class="line">    ros::init(argc, argv, <span class="string">"parameter_config"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建节点句柄</span></span><br><span class="line">    ros::NodeHandle node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 读取背景颜色参数</span></span><br><span class="line">    ros::param::<span class="built_in">get</span>(<span class="string">"/background_r"</span>, red);</span><br><span class="line">    ros::param::<span class="built_in">get</span>(<span class="string">"/background_g"</span>, green);</span><br><span class="line">    ros::param::<span class="built_in">get</span>(<span class="string">"/background_b"</span>, blue);</span><br><span class="line"></span><br><span class="line">    ROS_INFO(<span class="string">"Get Backgroud Color[%d, %d, %d]"</span>, red, green, blue);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 设置背景颜色参数</span></span><br><span class="line">    ros::param::<span class="built_in">set</span>(<span class="string">"/background_r"</span>, <span class="number">255</span>);</span><br><span class="line">    ros::param::<span class="built_in">set</span>(<span class="string">"/background_g"</span>, <span class="number">255</span>);</span><br><span class="line">    ros::param::<span class="built_in">set</span>(<span class="string">"/background_b"</span>, <span class="number">255</span>);</span><br><span class="line"></span><br><span class="line">    ROS_INFO(<span class="string">"Set Backgroud Color[255, 255, 255]"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 读取背景颜色参数</span></span><br><span class="line">    ros::param::<span class="built_in">get</span>(<span class="string">"/background_r"</span>, red);</span><br><span class="line">    ros::param::<span class="built_in">get</span>(<span class="string">"/background_g"</span>, green);</span><br><span class="line">    ros::param::<span class="built_in">get</span>(<span class="string">"/background_b"</span>, blue);</span><br><span class="line"></span><br><span class="line">    ROS_INFO(<span class="string">"Re-get Backgroud Color[%d, %d, %d]"</span>, red, green, blue);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 调用服务，刷新背景颜色</span></span><br><span class="line">    ros::service::waitForService(<span class="string">"/clear"</span>);</span><br><span class="line">    ros::ServiceClient clear_background = node.serviceClient&lt;std_srvs::Empty&gt;(<span class="string">"/clear"</span>);</span><br><span class="line">    std_srvs::Empty srv;</span><br><span class="line">    clear_background.call(srv);</span><br><span class="line">    </span><br><span class="line">    sleep(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>之后别忘了增加两句编译规则:</p>
+<pre><code>add_excutable(parameter_config src/parameter_config.cpp)
+target_link_libraries(paramter_config ${catkin_LIBRARIES})
+</code></pre><p>同时python程序编写：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 该例程设置/读取海龟例程中的参数</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">from</span> std_srvs.srv <span class="keyword">import</span> Empty</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">parameter_config</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="comment"># ROS节点初始化</span></span><br><span class="line">    rospy.init_node(<span class="string">'parameter_config'</span>, anonymous=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 读取背景颜色参数</span></span><br><span class="line">    red   = rospy.get_param(<span class="string">'/background_r'</span>)</span><br><span class="line">    green = rospy.get_param(<span class="string">'/background_g'</span>)</span><br><span class="line">    blue  = rospy.get_param(<span class="string">'/background_b'</span>)</span><br><span class="line"></span><br><span class="line">    rospy.loginfo(<span class="string">"Get Backgroud Color[%d, %d, %d]"</span>, red, green, blue)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 设置背景颜色参数</span></span><br><span class="line">    rospy.set_param(<span class="string">"/background_r"</span>, <span class="number">255</span>);</span><br><span class="line">    rospy.set_param(<span class="string">"/background_g"</span>, <span class="number">255</span>);</span><br><span class="line">    rospy.set_param(<span class="string">"/background_b"</span>, <span class="number">255</span>);</span><br><span class="line"></span><br><span class="line">    rospy.loginfo(<span class="string">"Set Backgroud Color[255, 255, 255]"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 读取背景颜色参数</span></span><br><span class="line">    red   = rospy.get_param(<span class="string">'/background_r'</span>)</span><br><span class="line">    green = rospy.get_param(<span class="string">'/background_g'</span>)</span><br><span class="line">    blue  = rospy.get_param(<span class="string">'/background_b'</span>)</span><br><span class="line"></span><br><span class="line">    rospy.loginfo(<span class="string">"Get Backgroud Color[%d, %d, %d]"</span>, red, green, blue)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 发现/spawn服务后，创建一个服务客户端，连接名为/spawn的service</span></span><br><span class="line">    rospy.wait_for_service(<span class="string">'/clear'</span>)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        clear_background = rospy.ServiceProxy(<span class="string">'/clear'</span>, Empty)</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 请求服务调用，输入请求数据</span></span><br><span class="line">        response = clear_background()</span><br><span class="line">        <span class="keyword">return</span> response</span><br><span class="line">    <span class="keyword">except</span> rospy.ServiceException, e:</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"Service call failed: %s"</span>%e</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    parameter_config()</span><br></pre></td></tr></table></figure></p>
+<p>一起来看看结果把：</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/参数结果.png">
+</div>
 
+<h1 id="十二、ROS中坐标系管理"><a href="#十二、ROS中坐标系管理" class="headerlink" title="十二、ROS中坐标系管理"></a>十二、ROS中坐标系管理</h1><div align=center>
+    <img src="/imgs/ROS的学习与使用/坐标变换.png">
+</div>
 
+<p>在机器人中存在许多不同的关节和部件，如何描述不同的不见之间的坐标关系是机器人学一个十分困难的问题，对此ROS中研发了相应的TF功能包。TF包底层封装了所有的坐标系之间的位置关系，并将其中的关系保存为一个TF树。</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/坐标变换实例.png">
+</div>
 
+<p>接下来我们通过一个实际的海龟案例来说明TF功能包的实际作用，与实际中机器人坐标变换的使用方案。</p>
+<pre><code>sudo apt-install ros-melodic-turtle-tf
+roslaunch turtle_tf turtle_tf_demo.launch
+rosrun turtlesim turtle_teleop_key
+rosrun tf view_frams
+</code></pre><p>于是我们就得到如下的结果：</p>
+<div align=center>
+    <img src="/imgs/ROS的学习与使用/坐标变换海龟.png">
+</div>
+
+<p>利用vire_fram我们容易知道，在其中有三个坐标系分别是世界坐标系和两个小海龟坐标系，于是小海龟的位置跟随变换也就是两个坐标不断重合的过程，这也说明了我们没有能够实现路径相同的原因。</p>
+<h1 id="十三、tf坐标系广播与监听的编程实现"><a href="#十三、tf坐标系广播与监听的编程实现" class="headerlink" title="十三、tf坐标系广播与监听的编程实现"></a>十三、tf坐标系广播与监听的编程实现</h1><p>这一节我们只要学习运用tf包对坐标系完成广播与监听的编程实现，具体如下:</p>
+<p>首先我们还是需要创建功能包:</p>
+<pre><code>$ cd /catkin_ws/src
+$ catkin_make_pkg learning_tf roscpp rospy tf turtlesim
+</code></pre><p>接下来我们分别编写海龟1（广播者）与海龟2（监听者）的代码：</p>
+<p>首先是海龟1，它发布自己的坐标位置<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 该例程产生tf数据，并计算、发布turtle2的速度指令</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;tf/transform_broadcaster.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;turtlesim/Pose.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="built_in">std</span>::<span class="built_in">string</span> turtle_name;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">poseCallback</span><span class="params">(<span class="keyword">const</span> turtlesim::PoseConstPtr&amp; msg)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 创建tf的广播器</span></span><br><span class="line">    <span class="keyword">static</span> tf::TransformBroadcaster br;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化tf数据</span></span><br><span class="line">    tf::Transform transform;</span><br><span class="line">    transform.setOrigin( tf::Vector3(msg-&gt;x, msg-&gt;y, <span class="number">0.0</span>) );</span><br><span class="line">    tf::Quaternion q;</span><br><span class="line">    q.setRPY(<span class="number">0</span>, <span class="number">0</span>, msg-&gt;theta);</span><br><span class="line">    transform.setRotation(q);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 广播world与海龟坐标系之间的tf数据</span></span><br><span class="line">    br.sendTransform(tf::StampedTransform(transform, ros::Time::now(), <span class="string">"world"</span>, turtle_name));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 初始化ROS节点</span></span><br><span class="line">    ros::init(argc, argv, <span class="string">"my_tf_broadcaster"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 输入参数作为海龟的名字</span></span><br><span class="line">    <span class="keyword">if</span> (argc != <span class="number">2</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        ROS_ERROR(<span class="string">"need turtle name as argument"</span>); </span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    turtle_name = argv[<span class="number">1</span>];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 订阅海龟的位姿话题</span></span><br><span class="line">    ros::NodeHandle node;</span><br><span class="line">    ros::Subscriber sub = node.subscribe(turtle_name+<span class="string">"/pose"</span>, <span class="number">10</span>, &amp;poseCallback);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 循环等待回调函数</span></span><br><span class="line">    ros::spin();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>接下来是海龟2，他会更具海龟1 刚刚广播的坐标进行移动，尽可能使得坐标系重合。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 该例程监听tf数据，并计算、发布turtle2的速度指令</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;ros/ros.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;tf/transform_listener.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;geometry_msgs/Twist.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;turtlesim/Spawn.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 初始化ROS节点</span></span><br><span class="line">    ros::init(argc, argv, <span class="string">"my_tf_listener"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建节点句柄</span></span><br><span class="line">    ros::NodeHandle node;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 请求产生turtle2</span></span><br><span class="line">    ros::service::waitForService(<span class="string">"/spawn"</span>);</span><br><span class="line">    ros::ServiceClient add_turtle = node.serviceClient&lt;turtlesim::Spawn&gt;(<span class="string">"/spawn"</span>);</span><br><span class="line">    turtlesim::Spawn srv;</span><br><span class="line">    add_turtle.call(srv);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建发布turtle2速度控制指令的发布者</span></span><br><span class="line">    ros::Publisher turtle_vel = node.advertise&lt;geometry_msgs::Twist&gt;(<span class="string">"/turtle2/cmd_vel"</span>, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建tf的监听器</span></span><br><span class="line">    tf::TransformListener listener;</span><br><span class="line"></span><br><span class="line">    <span class="function">ros::Rate <span class="title">rate</span><span class="params">(<span class="number">10.0</span>)</span></span>;</span><br><span class="line">    <span class="keyword">while</span> (node.ok())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 获取turtle1与turtle2坐标系之间的tf数据</span></span><br><span class="line">        tf::StampedTransform transform;</span><br><span class="line">        <span class="keyword">try</span></span><br><span class="line">        &#123;</span><br><span class="line">            listener.waitForTransform(<span class="string">"/turtle2"</span>, <span class="string">"/turtle1"</span>, ros::Time(<span class="number">0</span>), ros::Duration(<span class="number">3.0</span>));</span><br><span class="line">            listener.lookupTransform(<span class="string">"/turtle2"</span>, <span class="string">"/turtle1"</span>, ros::Time(<span class="number">0</span>), transform);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (tf::TransformException &amp;ex) </span><br><span class="line">        &#123;</span><br><span class="line">            ROS_ERROR(<span class="string">"%s"</span>,ex.what());</span><br><span class="line">            ros::Duration(<span class="number">1.0</span>).sleep();</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 根据turtle1与turtle2坐标系之间的位置关系，发布turtle2的速度控制指令</span></span><br><span class="line">        geometry_msgs::Twist vel_msg;</span><br><span class="line">        vel_msg.angular.z = <span class="number">4.0</span> * <span class="built_in">atan2</span>(transform.getOrigin().y(),</span><br><span class="line">                                        transform.getOrigin().x());</span><br><span class="line">        vel_msg.linear.x = <span class="number">0.5</span> * <span class="built_in">sqrt</span>(<span class="built_in">pow</span>(transform.getOrigin().x(), <span class="number">2</span>) +</span><br><span class="line">                                      <span class="built_in">pow</span>(transform.getOrigin().y(), <span class="number">2</span>));</span><br><span class="line">        turtle_vel.publish(vel_msg);</span><br><span class="line"></span><br><span class="line">        rate.sleep();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>这里python代码如下:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> roslib</span><br><span class="line">roslib.load_manifest(<span class="string">'learning_tf'</span>)</span><br><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tf</span><br><span class="line"><span class="keyword">import</span> turtlesim.msg</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">handle_turtle_pose</span><span class="params">(msg, turtlename)</span>:</span></span><br><span class="line">    br = tf.TransformBroadcaster()</span><br><span class="line">    br.sendTransform((msg.x, msg.y, <span class="number">0</span>),</span><br><span class="line">                     tf.transformations.quaternion_from_euler(<span class="number">0</span>, <span class="number">0</span>, msg.theta),</span><br><span class="line">                     rospy.Time.now(),</span><br><span class="line">                     turtlename,</span><br><span class="line">                     <span class="string">"world"</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    rospy.init_node(<span class="string">'turtle_tf_broadcaster'</span>)</span><br><span class="line">    turtlename = rospy.get_param(<span class="string">'~turtle'</span>)</span><br><span class="line">    rospy.Subscriber(<span class="string">'/%s/pose'</span> % turtlename,</span><br><span class="line">                     turtlesim.msg.Pose,</span><br><span class="line">                     handle_turtle_pose,</span><br><span class="line">                     turtlename)</span><br><span class="line">    rospy.spin()</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> roslib</span><br><span class="line">roslib.load_manifest(<span class="string">'learning_tf'</span>)</span><br><span class="line"><span class="keyword">import</span> rospy</span><br><span class="line"><span class="keyword">import</span> math</span><br><span class="line"><span class="keyword">import</span> tf</span><br><span class="line"><span class="keyword">import</span> geometry_msgs.msg</span><br><span class="line"><span class="keyword">import</span> turtlesim.srv</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    rospy.init_node(<span class="string">'turtle_tf_listener'</span>)</span><br><span class="line"></span><br><span class="line">    listener = tf.TransformListener()</span><br><span class="line"></span><br><span class="line">    rospy.wait_for_service(<span class="string">'spawn'</span>)</span><br><span class="line">    spawner = rospy.ServiceProxy(<span class="string">'spawn'</span>, turtlesim.srv.Spawn)</span><br><span class="line">    spawner(<span class="number">4</span>, <span class="number">2</span>, <span class="number">0</span>, <span class="string">'turtle2'</span>)</span><br><span class="line"></span><br><span class="line">    turtle_vel = rospy.Publisher(<span class="string">'turtle2/cmd_vel'</span>, geometry_msgs.msg.Twist,queue_size=<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    rate = rospy.Rate(<span class="number">10.0</span>)</span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> rospy.is_shutdown():</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            (trans,rot) = listener.lookupTransform(<span class="string">'/turtle2'</span>, <span class="string">'/turtle1'</span>, rospy.Time(<span class="number">0</span>))</span><br><span class="line">        <span class="keyword">except</span> (tf.LookupException, tf.ConnectivityException, tf.ExtrapolationException):</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">        angular = <span class="number">4</span> * math.atan2(trans[<span class="number">1</span>], trans[<span class="number">0</span>])</span><br><span class="line">        linear = <span class="number">0.5</span> * math.sqrt(trans[<span class="number">0</span>] ** <span class="number">2</span> + trans[<span class="number">1</span>] ** <span class="number">2</span>)</span><br><span class="line">        cmd = geometry_msgs.msg.Twist()</span><br><span class="line">        cmd.linear.x = linear</span><br><span class="line">        cmd.angular.z = angular</span><br><span class="line">        turtle_vel.publish(cmd)</span><br><span class="line"></span><br><span class="line">        rate.sleep()</span><br></pre></td></tr></table></figure>
+<h1 id="十四、ROS中launch启动文件的使用方法"><a href="#十四、ROS中launch启动文件的使用方法" class="headerlink" title="十四、ROS中launch启动文件的使用方法"></a>十四、ROS中launch启动文件的使用方法</h1>
       
 
       
@@ -741,7 +554,7 @@ int main(int argc, char **argv)
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/信息与通信/机器人控制//" class="article-tag-list-link color1">机器人控制</a>
+        			<a href="/categories/信息与通信/机器人，ROS的学习与使用//" class="article-tag-list-link color4">机器人，ROS的学习与使用</a>
         		</li>
       		
 		</ul>
@@ -851,7 +664,7 @@ int main(int argc, char **argv)
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、ROS简介"><span class="toc-number">1.</span> <span class="toc-text">一、ROS简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ROS是什么"><span class="toc-number">1.1.</span> <span class="toc-text">ROS是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ROS的历史"><span class="toc-number">1.2.</span> <span class="toc-text">ROS的历史</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、ROS的核心概念"><span class="toc-number">2.</span> <span class="toc-text">二、ROS的核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-节点与节点管理器"><span class="toc-number">2.1.</span> <span class="toc-text">1.节点与节点管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#节点（Node）————-执行单源"><span class="toc-number">2.1.1.</span> <span class="toc-text">节点（Node）———— 执行单源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点管理器（Node-Master）————-控制中心"><span class="toc-number">2.1.2.</span> <span class="toc-text">节点管理器（Node Master）———— 控制中心</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-话题通信"><span class="toc-number">2.2.</span> <span class="toc-text">2.话题通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#话题（Topic）————异步通信机制"><span class="toc-number">2.2.1.</span> <span class="toc-text">话题（Topic）————异步通信机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息（Message）————话题数据"><span class="toc-number">2.2.2.</span> <span class="toc-text">消息（Message）————话题数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-服务（Service）————同步通信机制"><span class="toc-number">2.3.</span> <span class="toc-text">3.服务（Service）————同步通信机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-参数-Parameter-————全局共享字典"><span class="toc-number">2.4.</span> <span class="toc-text">4. 参数(Parameter)————全局共享字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-文件系统"><span class="toc-number">2.5.</span> <span class="toc-text">5. 文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能包-Package"><span class="toc-number">2.5.1.</span> <span class="toc-text">功能包(Package)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能包清单-Package-manifest"><span class="toc-number">2.5.2.</span> <span class="toc-text">功能包清单(Package manifest)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元功能包-Meta-Package"><span class="toc-number">2.5.3.</span> <span class="toc-text">元功能包(Meta Package)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、ROS中的命令行工具"><span class="toc-number">3.</span> <span class="toc-text">三、ROS中的命令行工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、工作空间与工作包"><span class="toc-number">4.</span> <span class="toc-text">四、工作空间与工作包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-工作空间"><span class="toc-number">4.1.</span> <span class="toc-text">1.工作空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-工作空间的创建"><span class="toc-number">4.2.</span> <span class="toc-text">2.工作空间的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-功能包的创建"><span class="toc-number">4.3.</span> <span class="toc-text">3.功能包的创建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、发布者Publish的编程实现"><span class="toc-number">5.</span> <span class="toc-text">五、发布者Publish的编程实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-话题模型"><span class="toc-number">5.1.</span> <span class="toc-text">1.话题模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-话题的发布"><span class="toc-number">5.2.</span> <span class="toc-text">2.话题的发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建发布者代码"><span class="toc-number">5.2.1.</span> <span class="toc-text">(1).创建发布者代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置发布者代码编译规则"><span class="toc-number">5.2.2.</span> <span class="toc-text">(2).配置发布者代码编译规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、订阅者Subscriber的编程实现"><span class="toc-number">6.</span> <span class="toc-text">六、订阅者Subscriber的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、话题消息的定义与使用"><span class="toc-number">7.</span> <span class="toc-text">七、话题消息的定义与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-自定义话题消息"><span class="toc-number">7.1.</span> <span class="toc-text">1.自定义话题消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在程序中调用我们自定义的消息"><span class="toc-number">7.2.</span> <span class="toc-text">2.在程序中调用我们自定义的消息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、客户端Client的编程实现"><span class="toc-number">8.</span> <span class="toc-text">八、客户端Client的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、服务端Service的编程实现"><span class="toc-number">9.</span> <span class="toc-text">九、服务端Service的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、服务数据的类型与使用"><span class="toc-number">10.</span> <span class="toc-text">十、服务数据的类型与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-服务数据的定义"><span class="toc-number">10.1.</span> <span class="toc-text">1.服务数据的定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、ROS中参数的使用与编程方法"><span class="toc-number">11.</span> <span class="toc-text">十一、ROS中参数的使用与编程方法</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#一、ROS简介"><span class="toc-number">1.</span> <span class="toc-text">一、ROS简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#ROS是什么"><span class="toc-number">1.1.</span> <span class="toc-text">ROS是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ROS的历史"><span class="toc-number">1.2.</span> <span class="toc-text">ROS的历史</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、ROS的核心概念"><span class="toc-number">2.</span> <span class="toc-text">二、ROS的核心概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-节点与节点管理器"><span class="toc-number">2.1.</span> <span class="toc-text">1.节点与节点管理器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#节点（Node）————-执行单源"><span class="toc-number">2.1.1.</span> <span class="toc-text">节点（Node）———— 执行单源</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#节点管理器（Node-Master）————-控制中心"><span class="toc-number">2.1.2.</span> <span class="toc-text">节点管理器（Node Master）———— 控制中心</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-话题通信"><span class="toc-number">2.2.</span> <span class="toc-text">2.话题通信</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#话题（Topic）————异步通信机制"><span class="toc-number">2.2.1.</span> <span class="toc-text">话题（Topic）————异步通信机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#消息（Message）————话题数据"><span class="toc-number">2.2.2.</span> <span class="toc-text">消息（Message）————话题数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-服务（Service）————同步通信机制"><span class="toc-number">2.3.</span> <span class="toc-text">3.服务（Service）————同步通信机制</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-参数-Parameter-————全局共享字典"><span class="toc-number">2.4.</span> <span class="toc-text">4. 参数(Parameter)————全局共享字典</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-文件系统"><span class="toc-number">2.5.</span> <span class="toc-text">5. 文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#功能包-Package"><span class="toc-number">2.5.1.</span> <span class="toc-text">功能包(Package)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#功能包清单-Package-manifest"><span class="toc-number">2.5.2.</span> <span class="toc-text">功能包清单(Package manifest)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#元功能包-Meta-Package"><span class="toc-number">2.5.3.</span> <span class="toc-text">元功能包(Meta Package)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#三、ROS中的命令行工具"><span class="toc-number">3.</span> <span class="toc-text">三、ROS中的命令行工具</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#四、工作空间与工作包"><span class="toc-number">4.</span> <span class="toc-text">四、工作空间与工作包</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-工作空间"><span class="toc-number">4.1.</span> <span class="toc-text">1.工作空间</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-工作空间的创建"><span class="toc-number">4.2.</span> <span class="toc-text">2.工作空间的创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-功能包的创建"><span class="toc-number">4.3.</span> <span class="toc-text">3.功能包的创建</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#五、发布者Publish的编程实现"><span class="toc-number">5.</span> <span class="toc-text">五、发布者Publish的编程实现</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-话题模型"><span class="toc-number">5.1.</span> <span class="toc-text">1.话题模型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-话题的发布"><span class="toc-number">5.2.</span> <span class="toc-text">2.话题的发布</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-创建发布者代码"><span class="toc-number">5.2.1.</span> <span class="toc-text">(1).创建发布者代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-配置发布者代码编译规则"><span class="toc-number">5.2.2.</span> <span class="toc-text">(2).配置发布者代码编译规则</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#六、订阅者Subscriber的编程实现"><span class="toc-number">6.</span> <span class="toc-text">六、订阅者Subscriber的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#七、话题消息的定义与使用"><span class="toc-number">7.</span> <span class="toc-text">七、话题消息的定义与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-自定义话题消息"><span class="toc-number">7.1.</span> <span class="toc-text">1.自定义话题消息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-在程序中调用我们自定义的消息"><span class="toc-number">7.2.</span> <span class="toc-text">2.在程序中调用我们自定义的消息</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#八、客户端Client的编程实现"><span class="toc-number">8.</span> <span class="toc-text">八、客户端Client的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#九、服务端Service的编程实现"><span class="toc-number">9.</span> <span class="toc-text">九、服务端Service的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十、服务数据的类型与使用"><span class="toc-number">10.</span> <span class="toc-text">十、服务数据的类型与使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-服务数据的定义"><span class="toc-number">10.1.</span> <span class="toc-text">1.服务数据的定义</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十一、ROS中参数的使用与编程方法"><span class="toc-number">11.</span> <span class="toc-text">十一、ROS中参数的使用与编程方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十二、ROS中坐标系管理"><span class="toc-number">12.</span> <span class="toc-text">十二、ROS中坐标系管理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十三、tf坐标系广播与监听的编程实现"><span class="toc-number">13.</span> <span class="toc-text">十三、tf坐标系广播与监听的编程实现</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#十四、ROS中launch启动文件的使用方法"><span class="toc-number">14.</span> <span class="toc-text">十四、ROS中launch启动文件的使用方法</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -1030,11 +843,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">第一篇博客</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
+                <a href="javascript:void(0)" class="js-tag color4">Folklore</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">讲座笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1042,15 +871,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
+                <a href="javascript:void(0)" class="js-tag color2">Others</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1063,18 +892,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">评论专区</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Folklore</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Others</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
               </li>
             
             <div class="clearfix"></div>
