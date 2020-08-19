@@ -15,11 +15,14 @@
 <meta property="og:site_name" content="JF的博客">
 <meta property="og:description" content="神经网络的思想 人工智能中神经网络的基本思想和方法来自于生物学，所以我们接下来首先向大家介绍神经元工作的数学表示。 生物学上的神经网络： 神经元主要由细胞体、树突、轴突构成，树突是从其他神经元接收信号的图器，轴突是向其他神经元发送信号的凸起。由树突接受的电信号在细胞体中进行处理之后，通过作为输出装置的轴突被传输到其他神经元。   * 神经元形成神经网络  * 对于从其他多个神经元传过来的信号，如果">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/imgs/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E9%9A%90%E8%97%8F%E5%B1%82.png">
+<meta property="og:image" content="http://yoursite.com/imgs/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png">
 <meta property="article:published_time" content="2020-08-19T00:28:50.000Z">
-<meta property="article:modified_time" content="2020-08-19T00:58:42.356Z">
+<meta property="article:modified_time" content="2020-08-19T01:45:57.216Z">
 <meta property="article:author" content="John Fine">
 <meta property="article:tag" content="Ride &amp; Root">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/imgs/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E9%9A%90%E8%97%8F%E5%B1%82.png">
   
     <link rel="alternative" href="/atom.xml" title="JF的博客" type="application/atom+xml">
   
@@ -199,7 +202,7 @@
 <li>对于从其他多个神经元传过来的信号，如果他们的和不超过某个固定大小的值（阈值），则神经元不做出任何反应。如果超过阈值则，细胞体会输出相应反应，向其他轴突链接的其他神经元传递信号，我们称为点火。</li>
 <li>对于从其他多个神经元传入的信号具有不同的权重，从而使得对不同的刺激做出不同的反映。但是需要注意，无论刺激大小如何，神经细胞的输出的固定的。<h1 id="神经网络的数学基础"><a href="#神经网络的数学基础" class="headerlink" title="神经网络的数学基础"></a>神经网络的数学基础</h1></li>
 </ul>
-<ol>
+<h1 id="神经网络的输入与输出"><a href="#神经网络的输入与输出" class="headerlink" title="神经网络的输入与输出"></a>神经网络的输入与输出</h1><ol>
 <li>来自其他多个神经元的信号之和称为神经元的输入。</li>
 <li>如果这个信号之和超过神经元固有的阈值，则点火。</li>
 <li>神经元的输出信号可以使用0，1来表示，即使由多个输出端，其值也是同一个。</li>
@@ -215,6 +218,20 @@
     1    \left( \boldsymbol{z}>0 \right)\\
 \end{cases}</script><p>其中$z=w_{1}x_{1}+w_{2}x_{2}+w_{3}x_{3}+…+w_{n}x_{n}-\theta$</p>
 <p>需要注意的一点是神经网络中的神经网络图中输入、输出一定是具有方向的。必须要解释清楚你的每一步是如何做的。</p>
+<h1 id="神经网络的激活函数"><a href="#神经网络的激活函数" class="headerlink" title="神经网络的激活函数"></a>神经网络的激活函数</h1><p>激活函数是由神经网络的分析者和构建者来给定的，激活函数并不是固定的。需要我们依据自己的任务来确定，接下来我们以Sigmoid函数为例介绍激活函数：</p>
+<p>假定存在激活函数u，那么为了便于计算与计算机和数学的统一，我们将$\theta$替换为b，称为bias偏置。</p>
+<script type="math/tex; mode=display">
+\boldsymbol{y}=\boldsymbol{u}\left( \boldsymbol{w}_1\boldsymbol{x}_1+\boldsymbol{w}_2\boldsymbol{x}_2+\cdots +\boldsymbol{w}_{\boldsymbol{n}}\boldsymbol{x}_{\boldsymbol{n}}+\boldsymbol{b} \right)</script><h2 id="神经网络"><a href="#神经网络" class="headerlink" title="神经网络"></a>神经网络</h2><p>神经网络即是由上述多个神经元组成的网络结构，其中每一个神经元都遵循相同的规则，也就是说神经元之间通过通过输入输出函数互相连接。这种神经元组合连接就形成了神经网络。接下来简单介绍神经网络的各层，其中每一层都对上一层都做了了连接。<br>神经网络可以分为：输入层，隐藏层，中间层，而深度学习就就是叠加了很多层的神经网络。实际上学习效果并不是累加越多，学习效果就约好，需要依据实际任务确定。</p>
+<div align=center>
+    <img src="/imgs/人工智能/神经网络/隐藏层.png">
+</div>
+
+<p>中间层的个数代表了某种特殊的规则，但是这种规则目前尚未可知，暂时没有有效解决手段。无法通过理论推导来得知隐藏层神经元的个数，需要通过实验参考。</p>
+<div align=center>
+    <img src="/imgs/人工智能/神经网络/神经网络工作流程.png">
+</div>
+
+<p>神经网络是如何学习的呢？思路机器简单，神经网络得出的预测值，使得预测值与误差总和达到最小的权重和偏置，在数学上称为模型的最优化。</p>
 <h1 id="神经网络和误差反向传播法"><a href="#神经网络和误差反向传播法" class="headerlink" title="神经网络和误差反向传播法"></a>神经网络和误差反向传播法</h1><h1 id="深度学习和卷积神经网络"><a href="#深度学习和卷积神经网络" class="headerlink" title="深度学习和卷积神经网络"></a>深度学习和卷积神经网络</h1>
       
 
@@ -349,7 +366,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的思想"><span class="toc-number">1.</span> <span class="toc-text">神经网络的思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的数学基础"><span class="toc-number">2.</span> <span class="toc-text">神经网络的数学基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络和误差反向传播法"><span class="toc-number">3.</span> <span class="toc-text">神经网络和误差反向传播法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习和卷积神经网络"><span class="toc-number">4.</span> <span class="toc-text">深度学习和卷积神经网络</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的思想"><span class="toc-number">1.</span> <span class="toc-text">神经网络的思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的数学基础"><span class="toc-number">2.</span> <span class="toc-text">神经网络的数学基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的输入与输出"><span class="toc-number">3.</span> <span class="toc-text">神经网络的输入与输出</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的激活函数"><span class="toc-number">4.</span> <span class="toc-text">神经网络的激活函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#神经网络"><span class="toc-number">4.1.</span> <span class="toc-text">神经网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络和误差反向传播法"><span class="toc-number">5.</span> <span class="toc-text">神经网络和误差反向传播法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习和卷积神经网络"><span class="toc-number">6.</span> <span class="toc-text">深度学习和卷积神经网络</span></a></li></ol>
                     </div>
                 </span>
             </div>
