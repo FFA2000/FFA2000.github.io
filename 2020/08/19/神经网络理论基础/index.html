@@ -17,8 +17,9 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/imgs/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E9%9A%90%E8%97%8F%E5%B1%82.png">
 <meta property="og:image" content="http://yoursite.com/imgs/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B.png">
+<meta property="og:image" content="http://yoursite.com/imgs/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E5%8D%B7%E7%A7%AF.png">
 <meta property="article:published_time" content="2020-08-19T00:28:50.000Z">
-<meta property="article:modified_time" content="2020-08-19T01:45:57.216Z">
+<meta property="article:modified_time" content="2020-08-19T03:25:00.982Z">
 <meta property="article:author" content="John Fine">
 <meta property="article:tag" content="Ride &amp; Root">
 <meta name="twitter:card" content="summary">
@@ -231,8 +232,15 @@
     <img src="/imgs/人工智能/神经网络/神经网络工作流程.png">
 </div>
 
-<p>神经网络是如何学习的呢？思路机器简单，神经网络得出的预测值，使得预测值与误差总和达到最小的权重和偏置，在数学上称为模型的最优化。</p>
-<h1 id="神经网络和误差反向传播法"><a href="#神经网络和误差反向传播法" class="headerlink" title="神经网络和误差反向传播法"></a>神经网络和误差反向传播法</h1><h1 id="深度学习和卷积神经网络"><a href="#深度学习和卷积神经网络" class="headerlink" title="深度学习和卷积神经网络"></a>深度学习和卷积神经网络</h1>
+<p>神经网络是如何学习的呢？思路机器简单，神经网络得出的预测值，使得预测值与误差总和达到最小的权重和偏置，在数学上称为模型的最优化。在神经网络中我们通过数列的递推关系是来描述各层的。对于神经元的表达式，我们也容易将其简化为向量的形式$z=w\cdot x +c$.</p>
+<h1 id="神经网络和误差反向传播法"><a href="#神经网络和误差反向传播法" class="headerlink" title="神经网络和误差反向传播法"></a>神经网络和误差反向传播法</h1><h2 id="神经网络Hadamart举证"><a href="#神经网络Hadamart举证" class="headerlink" title="神经网络Hadamart举证"></a>神经网络Hadamart举证</h2><h2 id="神经网络网络的导数"><a href="#神经网络网络的导数" class="headerlink" title="神经网络网络的导数"></a>神经网络网络的导数</h2><h2 id="神经网络和复合函数"><a href="#神经网络和复合函数" class="headerlink" title="神经网络和复合函数"></a>神经网络和复合函数</h2><p>神经网络可以被视作一层层的复合函数</p>
+<h1 id="深度学习和卷积神经网络"><a href="#深度学习和卷积神经网络" class="headerlink" title="深度学习和卷积神经网络"></a>深度学习和卷积神经网络</h1><p>深度学习是叠加了很多层的神经网络，这样的神经网络使得隐藏层具有一定的结构，从而能够更加有效地进行学习。接下来我们来简单介绍卷积：</p>
+<div align=center>
+    <img src="/imgs/人工智能/神经网络/卷积.png">
+</div>
+
+<p>我们使用的过滤器一般是5*5的，对于不同的任务我们可以依据自己的需求使用相应大小的过滤器。逐步扫描后我们就能够得到一个据基层的一个子层，并在筛选后我们能够得到池化层。池化层中浓缩了偏好信息。输出层会将上述池化层的结果进行汇总最后得到不同的输出。</p>
+
       
 
       
@@ -325,11 +333,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2333/08/15/%E7%BD%AE%E9%A1%B6%E7%81%8C%E6%B0%B4%E5%8C%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/08/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%BF%90%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          置顶灌水区
+          深度学习框架介绍与运用
         
       </div>
     </a>
@@ -366,7 +374,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的思想"><span class="toc-number">1.</span> <span class="toc-text">神经网络的思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的数学基础"><span class="toc-number">2.</span> <span class="toc-text">神经网络的数学基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的输入与输出"><span class="toc-number">3.</span> <span class="toc-text">神经网络的输入与输出</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的激活函数"><span class="toc-number">4.</span> <span class="toc-text">神经网络的激活函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#神经网络"><span class="toc-number">4.1.</span> <span class="toc-text">神经网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络和误差反向传播法"><span class="toc-number">5.</span> <span class="toc-text">神经网络和误差反向传播法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习和卷积神经网络"><span class="toc-number">6.</span> <span class="toc-text">深度学习和卷积神经网络</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的思想"><span class="toc-number">1.</span> <span class="toc-text">神经网络的思想</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的数学基础"><span class="toc-number">2.</span> <span class="toc-text">神经网络的数学基础</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的输入与输出"><span class="toc-number">3.</span> <span class="toc-text">神经网络的输入与输出</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络的激活函数"><span class="toc-number">4.</span> <span class="toc-text">神经网络的激活函数</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#神经网络"><span class="toc-number">4.1.</span> <span class="toc-text">神经网络</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#神经网络和误差反向传播法"><span class="toc-number">5.</span> <span class="toc-text">神经网络和误差反向传播法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#神经网络Hadamart举证"><span class="toc-number">5.1.</span> <span class="toc-text">神经网络Hadamart举证</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#神经网络网络的导数"><span class="toc-number">5.2.</span> <span class="toc-text">神经网络网络的导数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#神经网络和复合函数"><span class="toc-number">5.3.</span> <span class="toc-text">神经网络和复合函数</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#深度学习和卷积神经网络"><span class="toc-number">6.</span> <span class="toc-text">深度学习和卷积神经网络</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -541,15 +549,7 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">电子电路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">GitHub</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">第一篇博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -557,7 +557,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
+                <a href="javascript:void(0)" class="js-tag color1">第一篇博客</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -569,11 +569,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color5">电子电路</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,11 +581,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">复变函数</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">六级方法论</a>
               </li>
              
               <li class="article-tag-list-item">
