@@ -173,44 +173,37 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-英语基础语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-机器学习读书笔记-第二章-模型的评估与选择" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/22/%E8%8B%B1%E8%AF%AD%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">英语基础语法</a>
+      <a class="article-title" href="/2020/09/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">机器学习读书笔记--第二章--模型的评估与选择</a>
     </h1>
   
 
         
-        <a href="/2020/08/22/%E8%8B%B1%E8%AF%AD%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-08-22T14:17:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-22</time>
+        <a href="/2020/09/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/" class="archive-article-date">
+  	<time datetime="2020-09-16T14:52:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        语法概述
-英语当中所有的语法可以归纳位10+9+8,10个词性，9个句子成分，8个句型。这就是英语中所有相对应的语法。
+        经验误差与过拟合
+在本章中我们首先介绍几个概念：
 
-动词
-动词的分类
-英语中的动词可以分为实义动词、助动词、前台动词和系动词。其中助动词与情态动词是不能够充当谓语的。
+ 1. 错误率:（error rate）：在m个样本中,存在a个样本分类错误，则错误率为$E=\frac{a}{m}$。
+ 2. 精度(accuracy)：精度=1-误差，也就是$q-\frac{a}{m}$。
+ 3. 误差(error):学习器在的实际预测输出与样本之间的真实输出差异称为误差“error”.更进一步，在训练集上的误差称为“训练误差”或者“经验误差”，在新样本上的误差称为“泛化误差”。
+ 4. 过拟合：在训练过程中，由于拟合过度使得模型缺少了泛化能力。
+ 5. 欠拟合：在训练过程中未能使得学习器对样本的一般性质得到有效认识。
 
-实义动词
-实义动词也就是具有实际意义的动词。实义动词可以分为及物动词和不及物动词。
-
-助动词
-协助主要动词构成位于的单词。没有实际意义，构成时代、语态、否定句、强调句。主要又have/do/be.接下来我们举几个例子简要介绍：
-be动词： 
-
- 1. He is always spilling things. (be 构成进行时)
- 2. This sent
         
-          <a class="article-more-a" href="/2020/08/22/%E8%8B%B1%E8%AF%AD%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/#more">more >></a>
+          <a class="article-more-a" href="/2020/09/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/#more">more >></a>
         
       
 
@@ -219,21 +212,32 @@ be动词：
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">读书笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/语言//" class="article-tag-list-link color3">语言</a>
+        			<a href="/categories/人工智能//" class="article-tag-list-link color5">人工智能</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/语言/英语//" class="article-tag-list-link color3">英语</a>
+        			<a href="/categories/人工智能/机器学习//" class="article-tag-list-link color5">机器学习</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/语言/英语/语法//" class="article-tag-list-link color3">语法</a>
+        			<a href="/categories/人工智能/机器学习/西瓜书读书笔记//" class="article-tag-list-link color3">西瓜书读书笔记</a>
         		</li>
       		
 		</ul>
@@ -242,7 +246,7 @@ be动词：
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/22/%E8%8B%B1%E8%AF%AD%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/09/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">展开全文 >></a>
         </p>
       
 
@@ -272,33 +276,496 @@ be动词：
 
 
   
-    <article id="post-《深入理解计算机系统》读书笔记-第二章-信息的处理和表示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-《深入理解计算机系统》读书笔记-第四章-处理体系结构" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/21/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BF%A1%E6%81%AF%E7%9A%84%E5%A4%84%E7%90%86%E5%92%8C%E8%A1%A8%E7%A4%BA/">《深入理解计算机系统》读书笔记--第二章--信息的处理和表示</a>
+      <a class="article-title" href="/2020/09/16/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%A4%84%E7%90%86%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">《深入理解计算机系统》读书笔记-第四章-处理体系结构</a>
     </h1>
   
 
         
-        <a href="/2020/08/21/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BF%A1%E6%81%AF%E7%9A%84%E5%A4%84%E7%90%86%E5%92%8C%E8%A1%A8%E7%A4%BA/" class="archive-article-date">
-  	<time datetime="2020-08-21T14:12:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-21</time>
+        <a href="/2020/09/16/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%A4%84%E7%90%86%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" class="archive-article-date">
+  	<time datetime="2020-09-16T14:43:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        概述
-这一节我们主要研究三种最重要的数字表示，无符号编码基于传统的二进制表示法，表示大于或者等于0的数字。 补码编码是表示有符号整数最常见的方法，有符号整数可以视为正或者符的数字。浮点数编码是表示实数以2为基数的版本。计算机用这些不同的表示方法实现算数运算，类似于对应的整数和实数运算。
-计算机中使用有限的为来表示某一个数字编码，因此当数字过大时会发生溢出错误，这也是我们在本节中需要重点研究的一个问题，包括溢出的产生与溢出问题的解决。
-同时依据不同类型数据的数学属性，其可能对不同数学定律存在不同的满足情况。具体说来浮点运算由于表示的精度有限，其是不可结合的。
-最后用过研究数字的实际表示，我们能够
         
-          <a class="article-more-a" href="/2020/08/21/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BF%A1%E6%81%AF%E7%9A%84%E5%A4%84%E7%90%86%E5%92%8C%E8%A1%A8%E7%A4%BA/#more">more >></a>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/16/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%A4%84%E7%90%86%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-数字电路与逻辑设计" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/">数字电路与逻辑设计——第一章——信息与编码</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" class="archive-article-date">
+  	<time datetime="2020-09-14T01:48:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        绪论
+数字量与模拟量
+数字量：在时间和数量上都是离散的、不连续的（存在某个最小单位$\Delta$的量）。
+模拟量：数字量之外的量均为模拟量，也可以说连续的量均为模拟量。
+
+数字电路与模拟电路
+数字电路与模拟电路的工作信号、研究对象，分析/设计方法以及所使用的数学建模的工具都有不同。
+
+电子电路的作用
+电子电路本质就完成两项工作：
+
+ 1. 信号处理
+ 2. 能量转换
+
+模拟电路：用连续的模拟电压或者电流值来表示信息，同时涉及到能量的转换：功放、电源等
+数字电路：用一个离散的电压序列来表示信息。
+
+数字电路的重点
+ 1. 数字电路的结构，每一层都有一定的复杂度
+ 2. 数字电路的复用，数字电路
+        
+          <a class="article-more-a" href="/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/信息与通信//" class="article-tag-list-link color1">信息与通信</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/信息与通信/基础知识//" class="article-tag-list-link color5">基础知识</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/信息与通信/基础知识/电路//" class="article-tag-list-link color3">电路</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-复变函数与积分变换-第六章-共形映射及其应用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/06/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/">复变函数与积分变换--第六章--共形映射及其应用</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/06/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2020-09-06T11:07:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        引言
+前面几章都是从分析学的角度来研究复变函数，本章将从几何的角度来研究复变函数，特别是解析函数的几何映射特征。具体地说z平面上的某一曲线，经过映射w=f(z)后在w平面上的像到底发生了什么变化。
+
+共形映射的概念
+伸缩率与旋转角
+为了定量刻画映射前后图形之间的关系，我们引入伸缩率与旋转角两个概念。如图所示，过点$z_{0}$的曲线$C_{0}$经过$w=f(z)$映射后，变成了过$w_{0}$点的曲线$T^{0}$。容易看出，曲线发生了伸缩和旋转变换。
+
+伸缩率
+若极限$\lim_{z\to z_{0}}\frac{w-w_{0}}{z-z_{0}}=\lim_{\Delta z\to 0}
+        
+          <a class="article-more-a" href="/2020/09/06/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">复变函数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学//" class="article-tag-list-link color3">数学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学/分析学//" class="article-tag-list-link color4">分析学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学/分析学/复分析//" class="article-tag-list-link color4">复分析</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/06/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-线性代数-第四章-特征值、特征向量与二次型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E3%80%81%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B/">线性代数--第四章--特征值、特征向量与二次型</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E3%80%81%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2020-09-01T09:06:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        特征值与二次型
+本章主要讨论两个问题，首先是为什么要将二次型化为标准型，接着是如何将二次型化为标准型。在此章中的理解需要细致入微的理解本章的数学背景。
+
+二次型的背景
+二次型的提出是为了应对实际工程中一些经过旋转，形状较为复杂的图形。也就是此时空间曲线，曲面方程中除存在平方项外，还存在交叉项。
+此处的思想就是站在另外一个角度看问题，对于某个二次方程，使用向量对其进行研究，于是我们得到。
+
+二次型的转化
+为了将上述式子中的系数矩阵变为对角阵，从而方便我们进行运算以及图形分析，我们有必要引入如下的方法和概念：
+
+ 1. 相似：若存在可逆矩阵C，使得$C_{-1}AC=B$时，我们称A~B。
+ 2.
+        
+          <a class="article-more-a" href="/2020/09/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E3%80%81%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学//" class="article-tag-list-link color3">数学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学/代数学//" class="article-tag-list-link color4">代数学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学/代数学/线性代数//" class="article-tag-list-link color5">线性代数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%89%B9%E5%BE%81%E5%80%BC%E3%80%81%E7%89%B9%E5%BE%81%E5%90%91%E9%87%8F%E4%B8%8E%E4%BA%8C%E6%AC%A1%E5%9E%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-线性代数-第三章-向量组与方程组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E6%96%B9%E7%A8%8B%E7%BB%84/">线性代数--第三章--向量组与方程组</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E6%96%B9%E7%A8%8B%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2020-08-28T09:01:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        方程组的解于向量间关系的描述
+方程组求解
+对于此方程组，其解就是在描述一个向量与一组向量之间的关系的表示系数。简称为解就是系数。
+
+方程组的定性研究
+相关性问题
+相关性问题研究的是有无多余向量。
+假定当前有一向量组为$\alpha_{1},\alpha_{2},\cdots,\alpha_{s}$，
+若此向量组中存在多余向量，那么：
+$|\alpha_{1},\alpha_{2},\cdots,\alpha_{s}|=0$
+$\Longleftrightarrow r(\alpha_{1},\alpha_{2},\cdots,\alpha_{s})<s$
+若此向量组中不存在多余向量，那么：
+$
+        
+          <a class="article-more-a" href="/2020/08/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E6%96%B9%E7%A8%8B%E7%BB%84/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学//" class="article-tag-list-link color3">数学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学/代数学//" class="article-tag-list-link color4">代数学</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数学/代数学/线性代数//" class="article-tag-list-link color5">线性代数</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/08/28/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E5%90%91%E9%87%8F%E7%BB%84%E4%B8%8E%E6%96%B9%E7%A8%8B%E7%BB%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-《深入理解计算机系统》读书笔记-第三章-程序的机器级表示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/25/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">《深入理解计算机系统》读书笔记--第三章--程序的机器级表示</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/25/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/" class="archive-article-date">
+  	<time datetime="2020-08-25T08:52:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        历史发展
+程序编码
+linux命令中，gcc指的就是GCC编译器。因为这是 Linux 上默认的编译器，我们也可以简单地用 gcc来启动它。实际上 gcc 命令调用了一整套的程序，将源代码转化成可执行代码。首先，C 预处理 器扩展源代码，插人所有用include 命令指定的文件，并扩展所有声明指定的宏。
+
+机器级代码
+计算机系统是一个高度抽象的系统，使用更简单的抽线模型来颖仓复杂的细节。对于机器级别的编程而言，其中最为重要的两种抽象分别是：
+
+ 1. 由指令集体系结果或者指令集架构来定义机器级程序的格式和行为，它定义了处理器的状态、指令的格式，以及每条指令对状态的影响。
+ 2. 机器级程序使用
+        
+          <a class="article-more-a" href="/2020/08/25/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/#more">more >></a>
         
       
 
@@ -341,7 +808,7 @@ be动词：
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/21/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E4%BF%A1%E6%81%AF%E7%9A%84%E5%A4%84%E7%90%86%E5%92%8C%E8%A1%A8%E7%A4%BA/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/25/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E7%A8%8B%E5%BA%8F%E7%9A%84%E6%9C%BA%E5%99%A8%E7%BA%A7%E8%A1%A8%E7%A4%BA/">展开全文 >></a>
         </p>
       
 
@@ -371,20 +838,20 @@ be动词：
 
 
   
-    <article id="post-人脸识别实训" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-英语翻译" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E5%AE%9E%E8%AE%AD/">人脸识别实训</a>
+      <a class="article-title" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E7%BF%BB%E8%AF%91/">英语翻译</a>
     </h1>
   
 
         
-        <a href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E5%AE%9E%E8%AE%AD/" class="archive-article-date">
-  	<time datetime="2020-08-20T07:16:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-20</time>
+        <a href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E7%BF%BB%E8%AF%91/" class="archive-article-date">
+  	<time datetime="2020-08-25T07:41:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-25</time>
 </a>
         
       </header>
@@ -403,7 +870,7 @@ be动词：
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB%E5%AE%9E%E8%AE%AD/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E7%BF%BB%E8%AF%91/">展开全文 >></a>
         </p>
       
 
@@ -433,31 +900,37 @@ be动词：
 
 
   
-    <article id="post-人脸识别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-英语写作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">人脸识别</a>
+      <a class="article-title" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/">英语写作</a>
     </h1>
   
 
         
-        <a href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2020-08-20T00:32:40.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-20</time>
+        <a href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/" class="archive-article-date">
+  	<time datetime="2020-08-25T03:33:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        人脸识别的应用
-人脸识别的发展
-s
+        六级作文分类
+对于六级作文主要以议论文为主,可以大致分为以下类型：名言式、描图式、描述式.名言是是通过某句名言，进而对其发表自己的看法或者间接；描图式是指对给出的图片，进行细致的观察后对其发表自己的看法或者见解；描述式是在给定框架和背景主题下，自由发挥对某一特定主题抒发自己的观点以及看法。
+
+首段写作——天龙八部
+定语1：定语从句
+构成方式：先行词+关系词+从句
+例子：
+The development of technology has brought us unprecedented transformation, which is inevitable and undeniable.
+Ro
         
-          <a class="article-more-a" href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/#more">more >></a>
+          <a class="article-more-a" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/#more">more >></a>
         
       
 
@@ -467,10 +940,29 @@ s
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/语言//" class="article-tag-list-link color3">语言</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/语言/英语//" class="article-tag-list-link color3">英语</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/语言/英语/写作//" class="article-tag-list-link color3">写作</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/20/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E5%86%99%E4%BD%9C/">展开全文 >></a>
         </p>
       
 
@@ -500,26 +992,46 @@ s
 
 
   
-    <article id="post-深度学习框架介绍与运用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-英语选词填空" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%BF%90%E7%94%A8/">深度学习框架介绍与运用</a>
+      <a class="article-title" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E9%80%89%E8%AF%8D%E5%A1%AB%E7%A9%BA/">英语选词填空</a>
     </h1>
   
 
         
-        <a href="/2020/08/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%BF%90%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2020-08-19T05:49:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-19</time>
+        <a href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E9%80%89%E8%AF%8D%E5%A1%AB%E7%A9%BA/" class="archive-article-date">
+  	<time datetime="2020-08-25T01:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-25</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
+        步骤
+ 1. 识别单词，认识几个算几个。
+ 2. 确定词意和词性，词义考逻辑，词性靠结构。
+
+设空结构
+名词设空结构
+ 1. 冠词+(名词)
+ 2. 冠词+形容词+(名词)
+ 3. 数词+（名词）
+
+形容词设空结构
+ 1. 动词+冠词+(形容词)+名词
+ 2. 冠词+比较级+（形容词）+名词
+ 3. 形容词+(形容词)+名词
+
+动词设空结构
+ 1. cam/may/must/…/will/不定式+do
+ 2. 主谓宾/主谓
+        
+          <a class="article-more-a" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E9%80%89%E8%AF%8D%E5%A1%AB%E7%A9%BA/#more">more >></a>
         
       
 
@@ -529,352 +1041,29 @@ s
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/语言//" class="article-tag-list-link color3">语言</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/语言/英语//" class="article-tag-list-link color3">英语</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/语言/英语/选词填空//" class="article-tag-list-link color5">选词填空</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%BF%90%E7%94%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-神经网络理论基础" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/19/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">神经网络理论基础</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/19/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/" class="archive-article-date">
-  	<time datetime="2020-08-19T00:28:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        神经网络的思想
-人工智能中神经网络的基本思想和方法来自于生物学，所以我们接下来首先向大家介绍神经元工作的数学表示。
-生物学上的神经网络：
-神经元主要由细胞体、树突、轴突构成，树突是从其他神经元接收信号的图器，轴突是向其他神经元发送信号的凸起。由树突接受的电信号在细胞体中进行处理之后，通过作为输出装置的轴突被传输到其他神经元。
-
- * 神经元形成神经网络
- * 对于从其他多个神经元传过来的信号，如果他们的和不超过某个固定大小的值（阈值），则神经元不做出任何反应。如果超过阈值则，细胞体会输出相应反应，向其他轴突链接的其他神经元传递信号，我们称为点火。
- * 对于从其他多个神经元传入的信号具有不同的
-        
-          <a class="article-more-a" href="/2020/08/19/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/19/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E7%90%86%E8%AE%BA%E5%9F%BA%E7%A1%80/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-统计学习理论与支持向量机" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/18/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA%E4%B8%8E%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">统计学习理论与支持向量机</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/18/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA%E4%B8%8E%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/" class="archive-article-date">
-  	<time datetime="2020-08-18T13:25:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/18/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%90%86%E8%AE%BA%E4%B8%8E%E6%94%AF%E6%8C%81%E5%90%91%E9%87%8F%E6%9C%BA/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-集成学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/18/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">集成学习</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/18/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-08-18T07:13:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/18/%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-决策树模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/18/%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B/">决策树模型</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/18/%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-08-18T05:53:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        决策树的概念
-决策树是一种十分常用的 分类方法，对于部分特殊问题，也可用于回归任务。首先需要明确的是决策树是一种监督学习。决策树十分直观，易于理解。
-具体说来决策树通过把数据节点把数据分配到某个叶子节点来确定数据集中样本所属的分类。决策树由决策节点、分支和叶子节点组成：
-
- 1. 决策节点表示在样本一个属性上的划分。
- 2. 分支表示对于决策节点进行划分的输出。
- 3. 叶节点代表结果分支到达的类。
-    决策树会从决策树的根节点出发，自顶向下移动，在每个决策节点都会进行划分，通过划分结果将样本进行分类，进入不同分支，最后到达叶子节点，这个过程就是利用决策树进行分类的结果。
-    通过上述
-        
-          <a class="article-more-a" href="/2020/08/18/%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/18/%E5%86%B3%E7%AD%96%E6%A0%91%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-贝叶斯决策理论" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/18/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/">贝叶斯决策理论</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/18/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/" class="archive-article-date">
-  	<time datetime="2020-08-18T00:29:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        决策
-什么是决策？
-决策，顾名思义，做决定，做选择。决策是某一种决定，为了实现特定的目标，依据客观的可能，在占有一定信息和经验的基础上，借助一定的工具、技巧和相应方法，对当前情况做出判断，我们称为决策。而人类智能的一个重要标志就是能通过对当前环境情况的判断从而做出相应决策。
-
-贝叶斯决策
-贝叶斯决策的概念
-一切不确定的因素都通过概率或者概率分布来表示，而后通过贝叶斯公式推理出目标的概率或者概率分布，最终做出决策。这种方法具有数学的逻辑性和严密性。接下来我们思考几个问题：在分类时我们是否必须计算概率？通过概率来描述不确定性因素是否合理？通过概率来做分类是否合理？
-如何进行决策？
-分类问题能不能避
-        
-          <a class="article-more-a" href="/2020/08/18/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/18/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%86%B3%E7%AD%96%E7%90%86%E8%AE%BA/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/08/25/%E8%8B%B1%E8%AF%AD%E9%80%89%E8%AF%8D%E5%A1%AB%E7%A9%BA/">展开全文 >></a>
         </p>
       
 
@@ -906,7 +1095,7 @@ s
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
     </nav>
   
 
@@ -1033,7 +1222,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">电子电路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Folklore</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1045,27 +1246,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">读书笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">电子电路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Others</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1077,11 +1262,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">六级方法论</a>
+                <a href="javascript:void(0)" class="js-tag color3">物理</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">旅游</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">机器人控制</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">六级方法论</a>
               </li>
              
               <li class="article-tag-list-item">
