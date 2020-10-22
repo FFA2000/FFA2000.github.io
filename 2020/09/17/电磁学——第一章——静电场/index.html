@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://yoursite.com/imgs/%E7%89%A9%E7%90%86/%E7%94%B5%E7%A3%81%E5%AD%A6/%E9%9D%99%E7%94%B5%E5%9C%BA/%E7%82%B9%E7%94%B5%E8%8D%B7.png">
 <meta property="og:image" content="http://yoursite.com/imgs/%E7%89%A9%E7%90%86/%E7%94%B5%E7%A3%81%E5%AD%A6/%E9%9D%99%E7%94%B5%E5%9C%BA/%E7%82%B9%E7%94%B5%E8%8D%B7.png">
 <meta property="article:published_time" content="2020-09-17T13:57:56.000Z">
-<meta property="article:modified_time" content="2020-09-17T15:37:25.047Z">
+<meta property="article:modified_time" content="2020-10-06T03:29:35.647Z">
 <meta property="article:author" content="John Fine">
 <meta property="article:tag" content="物理">
 <meta name="twitter:card" content="summary">
@@ -210,6 +210,7 @@
 <li>电荷具有守恒定律，对于某一孤立的系统，其系统内的总电荷总是不变的。电荷守恒定律是自然界的基本定律之一。无论对于宏观还是微观都是成立的。</li>
 <li>同时电荷也是量子化的，元电荷是带电体的最小带电单位，一切基本粒子都是由某个基本的电荷单元构成的。</li>
 <li>电荷运动具有不变性，也就是说，一个电荷与它的运动状态无关，电荷的多少具有相对论不变性。</li>
+<li>电荷具有正负，因此其具有屏蔽等效应。</li>
 </ol>
 <h2 id="库伦定律"><a href="#库伦定律" class="headerlink" title="库伦定律"></a>库伦定律</h2><p>库伦定律描述了 <strong>真空中</strong>，两个 <strong>静止的</strong> 点电荷之间相互作用力的关系：</p>
 <script type="math/tex; mode=display">
@@ -221,13 +222,17 @@
 <li>库伦定律是物理学中著名的平方反比定律之一</li>
 <li>库伦定律满足牛顿第三定律</li>
 <li>库伦定律的使用需要满足：点电荷、真空、施力电荷对观测者静止。</li>
+<li>事实上，真空的条件是不必要的，对于点电荷而言，若不存在于真空，本质上就是存在其他电荷，此时考虑叠加原理即可。</li>
+<li>静止的条件是必要，但是可以稍做推广，必须考察的是相对于观察者静止的电荷，另外一个电荷可以运动。此时系统实际上不符合牛顿第三定律，是因为存在场的变化。实质上动量仍然守恒。</li>
 </ol>
 <h2 id="电场力的叠加原理"><a href="#电场力的叠加原理" class="headerlink" title="电场力的叠加原理"></a>电场力的叠加原理</h2><p>两点点电荷间互相作用力不因其他电荷的存在而改变，点电荷系对某点和的作用等于系内各点点电荷单独存在时候对电荷作用的矢量和。</p>
 <div align=center>
     <img src="/imgs/物理/电磁学/静电场/叠加原理.png">
 </div>
 
-<h1 id="电场与电场强度"><a href="#电场与电场强度" class="headerlink" title="电场与电场强度"></a>电场与电场强度</h1><h1 id="静电场的发展建立和发展"><a href="#静电场的发展建立和发展" class="headerlink" title="静电场的发展建立和发展"></a>静电场的发展建立和发展</h1><h2 id="静电场"><a href="#静电场" class="headerlink" title="静电场"></a>静电场</h2><p>相对于观察者静止的带电体周围的电场。对于静电场我们有如下两个重要的性质</p>
+
+
+<h1 id="电场与电场强度"><a href="#电场与电场强度" class="headerlink" title="电场与电场强度"></a>电场与电场强度</h1><h2 id="静电场"><a href="#静电场" class="headerlink" title="静电场"></a>静电场</h2><p>相对于观察者静止的带电体周围的电场。对于静电场我们有如下两个重要的性质</p>
 <ol>
 <li>场中任何带点体都受电场力作用（动量传递）。</li>
 <li>带电体在电场中移动，场对带电体做功。（能量传递）。<br>用$\vec{E},U$分别来描述静电场的上述两项性质。</li>
@@ -260,7 +265,60 @@ E=\sum_{i}\frac{q_{i}}{4\pi \epsilon_{0}r_{i}^{2}} \hat{r_{i}}</script><p>事实
     \boldsymbol{\rho }\,\,\boldsymbol{dV}\,\,  \text{其中}\boldsymbol{\rho }为\text{电荷分布的体密度，}\boldsymbol{dV}为\text{体积微元}\\
 \end{cases}\,\,</script><h3 id="常见带电物体的场强计算"><a href="#常见带电物体的场强计算" class="headerlink" title="常见带电物体的场强计算"></a>常见带电物体的场强计算</h3><h4 id="电偶极子"><a href="#电偶极子" class="headerlink" title="电偶极子"></a>电偶极子</h4><p>电偶极子是由两个大小相等，符号相反的点电荷+q和-q组成的点电荷系。从负电荷到正电荷的矢径l  称为电偶极子的臂。电荷q和臂l的乘积$q\vec{l}=\vec{p}$称为电偶极矩，简称电矩。</p>
 <h5 id="电偶极子延长线上任意一点的场强分布"><a href="#电偶极子延长线上任意一点的场强分布" class="headerlink" title="电偶极子延长线上任意一点的场强分布"></a>电偶极子延长线上任意一点的场强分布</h5><p>对于电偶极子</p>
-
+<h4 id="均匀带电导线"><a href="#均匀带电导线" class="headerlink" title="均匀带电导线"></a>均匀带电导线</h4><h4 id="电场与力矩"><a href="#电场与力矩" class="headerlink" title="电场与力矩"></a>电场与力矩</h4><h4 id="均匀带电球壳"><a href="#均匀带电球壳" class="headerlink" title="均匀带电球壳"></a>均匀带电球壳</h4><h1 id="Gauss环路定理与环路定理"><a href="#Gauss环路定理与环路定理" class="headerlink" title="Gauss环路定理与环路定理"></a>Gauss环路定理与环路定理</h1><h2 id="电磁力导言"><a href="#电磁力导言" class="headerlink" title="电磁力导言"></a>电磁力导言</h2><p>电磁力是一种典型的非接触力，对于非接触力而言，一个十分重要的问题就是理解非接触力的作用机制。其中一个主要的问题是对于非接触力而言，是否需要媒介物，若需要媒介物，那媒介物是什么？另外一个重要的问题是，对于非接触力而言是否是超距作用？力的传播是否需要时间？</p>
+<p>对于这个问题，主要有两种观点，一种称为超距作用的观点，也就是电磁力的传播和产生不需要媒介物传播也不需要时间；另外一种是近距作业的观点，与超距作用完全相反的是，其认为电磁力的产生和传播需要时间和介质，但是由于时间较短，难以观察到。</p>
+<p>这个问题直到电磁场理论的完全建立和爱因斯坦狭义相对论的提出才得以完全解决。</p>
+<h2 id="场的概念"><a href="#场的概念" class="headerlink" title="场的概念"></a>场的概念</h2><p>场是分为矢量场和标量场，其表征着在某一空间范围内连续分布的客体。对于场这种全新的研究对象，类比于流体力学，两个重点是这个场是否有源和旋。同时在流体力学中已经提出通量的概念，也就是单位时间通过某一面的物质量。而事实上，通量概念的提出为是否有源提供了数学描述。而环量为一个场是否有旋的研究提供了数学研究手段。</p>
+<p>所以研究一个场须要研究这个场的两个物理特征，也就是其是否有源、是否有旋。</p>
+<h2 id="静电场的高斯定理与环路定理"><a href="#静电场的高斯定理与环路定理" class="headerlink" title="静电场的高斯定理与环路定理"></a>静电场的高斯定理与环路定理</h2><h3 id="通量的计算"><a href="#通量的计算" class="headerlink" title="通量的计算"></a>通量的计算</h3><p>对于一般的场，其通量均可以按照如下公式计算，对于某一特定的场，例如流体将A换位V，对于磁场将A换为E，诸如此类。</p>
+<script type="math/tex; mode=display">
+\iint_{\boldsymbol{S}}{\boldsymbol{\vec{A}}}\cdot \boldsymbol{d\vec{S}}\,\,=\,\,\iint_{\boldsymbol{S}}{\boldsymbol{A}\cos \boldsymbol{\theta }\,\,\boldsymbol{dS}}</script><h3 id="静电场的高斯定理"><a href="#静电场的高斯定理" class="headerlink" title="静电场的高斯定理"></a>静电场的高斯定理</h3><script type="math/tex; mode=display">
+\iint_{\boldsymbol{S}}{\boldsymbol{\vec{E}}}\cdot \boldsymbol{d\vec{S}}\,\,=\,\,\frac{\boldsymbol{\varSigma q}}{\boldsymbol{\varepsilon }_0}</script><p>下面是其简单证明：<br>设有一个球面，设其半径为r，球心为坐标原点，其内部包围了电荷量为q的点电荷，那么此时场强E的方向处处垂直于球面，且E的大小相等，均为：</p>
+<script type="math/tex; mode=display">
+E = \frac{Q}{4\pi \varepsilon_{0} r^{2}}</script><p>那么此时通过这个球面的电通量为</p>
+<script type="math/tex; mode=display">
+\boldsymbol{\varPsi }_{\boldsymbol{E}}=\iint_{\boldsymbol{S}}{\boldsymbol{E}\cdot \,\,\boldsymbol{dS}\,\,=\,\,}\iint_{\boldsymbol{S}}{\boldsymbol{E}\,\,\cos \boldsymbol{\theta }\,\,\boldsymbol{dS}\,\,=\,\,}\iint_{\boldsymbol{S}}{\frac{\boldsymbol{q}}{4\boldsymbol{\pi \varepsilon }_0\boldsymbol{r}^2}\,\,\boldsymbol{dS}\,\,=\,\,}\frac{\boldsymbol{q}}{4\boldsymbol{\pi \varepsilon }_0\boldsymbol{r}^2}\iint{\boldsymbol{dS}\,\,=\,\,\frac{\boldsymbol{q}}{\boldsymbol{\varepsilon }_0}}</script><p>若此时点电荷不在球面中心，容易知道因为此时球面对于点电荷的立体角为$4\pi$，可以得到此时高斯定理形式任然不变。</p>
+<p>若此时点电荷不再球面内，容易看出此时由于我们所作球面为闭合曲面，于是容易知道此时正点电荷对此球面上的电通量没有影响。</p>
+<p>接下来考虑若存在多个点电荷的情况，容易知道的是，对于多个点电荷而言，由于其电场强度分布满足叠加定理，而积分运算保持线性不变，于是我们容易知道对于多个点电荷而言，其高斯定理也满足叠加定理。</p>
+<p>综上高斯定理得证。</p>
+<h3 id="静电场的环路定理"><a href="#静电场的环路定理" class="headerlink" title="静电场的环路定理"></a>静电场的环路定理</h3><script type="math/tex; mode=display">
+\iint{\boldsymbol{\vec{E}}}\cdot \boldsymbol{d\vec{l}}\,\,=\,\,0</script><p>环路定理的本质就是积分与路径无关的条件。静电场的环路定理和高斯定理证明类似，首先证明其对于某一单一点电荷成立，而后将其推广至所有情况。</p>
+<p>这个定理的证明两个重要特点其一是电力是个有心力，其二是电力点电荷具有球对称性。</p>
+<h2 id="静电场特征总结"><a href="#静电场特征总结" class="headerlink" title="静电场特征总结"></a>静电场特征总结</h2><p>静电场是一个有源无旋场。</p>
+<h1 id="电势能与电势"><a href="#电势能与电势" class="headerlink" title="电势能与电势"></a>电势能与电势</h1><p>因为注意到静电力做功与路径无关，因此受到力学的启发，我们也引入类似的“势”，并称之为“电势”。此时容易得到，对于某一个点电荷组成的点电荷系统，其蕴藏的能量只与其中各点的相对位置有关，于是为了研究能量特征，我们有必要引入电势。</p>
+<h2 id="电势的引入"><a href="#电势的引入" class="headerlink" title="电势的引入"></a>电势的引入</h2><p>对于某一带电体，对于其外的某一试探电荷q，将试探电荷从P点移动到Q点，此时外力克服电场力所作的功，即为此时电势能的变化量。</p>
+<script type="math/tex; mode=display">
+W_{PQ} = W_{P} - W_{Q} = A_{PQ} = q\int_{P}^{Q} \vec{E}d\vec{l}</script><p>于是为研究带电体电场的分布情况，我们需要消除试探电荷的影响，于是：</p>
+<script type="math/tex; mode=display">
+U_{PQ} = U_{P} - U_{Q} = \frac{W_{PQ}}{q_{0}}</script><p>于是此时就引入了电势差，那么需要一个完整的电势的体系，我们还需要规定一个零电势点。通常我们规定无穷远点为零电势点。事实上，我们需要找一个电场强度比较弱的点作为零电势点，电势的变化较小的点作为零电势点。于是知道容易选取无穷远是一种较为理想的情况。此外，我们也通常使用接地的点电势为0。但是当问题与地球的大小是可以相比的，那么久不能选取地为零势能点。</p>
+<p>那么对于多个点电荷，可以使用叠加定理，将各个点电荷所产生的电势叠加即可。若对于某电荷连续分布的物体，求和可以变为积分：</p>
+<script type="math/tex; mode=display">
+U_{P} = \int U_{P_{i}}</script><h1 id="电场线与等势面"><a href="#电场线与等势面" class="headerlink" title="电场线与等势面"></a>电场线与等势面</h1><p>电场线与等势面都是描绘电场性质的物理量，他们之间有如下关系：</p>
+<h2 id="电场线与等势面是处处正交的。"><a href="#电场线与等势面是处处正交的。" class="headerlink" title="电场线与等势面是处处正交的。"></a>电场线与等势面是处处正交的。</h2><p>对此结论我们给出如下证明，对于某一点电荷q，将其从空间中P沿等势面移动到Q，那么此时我们得到如下结果：</p>
+<script type="math/tex; mode=display">
+A=q_{0}(U_{P}-U_{Q})=0(P,Q为等势面)</script><p>而依据定义，容易知道此时电场力做功为：</p>
+<script type="math/tex; mode=display">
+A = \vec{F} \Delta\vec{l} = q_{0}\vec{E} \Deltal \vec{l} \cos \theta</script><p>此时，$q_{0},\vec{E},\vec{l}$均不可能为0，那么此时必然有$cos\theta$为0，也就是二者正交。</p>
+<h2 id="电场线的方向总是由高电势指向低电势"><a href="#电场线的方向总是由高电势指向低电势" class="headerlink" title="电场线的方向总是由高电势指向低电势"></a>电场线的方向总是由高电势指向低电势</h2><p>将一个试探电荷$q_{0}$从某以等势面Q移动到另外一个等势面P，那么此时做功为：</p>
+<script type="math/tex; mode=display">
+A = q_{0}(U_{Q}-U_{P}) > 0</script><p>那么由做功的积分定义可以知道，此时场强总是正的，也就是说，此时电场线总是从高电势指向低电势。</p>
+<h2 id="vec-E-bigtriangledown-U"><a href="#vec-E-bigtriangledown-U" class="headerlink" title="$\vec{E} = \bigtriangledown U$"></a>$\vec{E} = \bigtriangledown U$</h2><p>电势是场强的积分，反过来场强决定了电势的变化率。电势变化剧烈的地方场强大，电势变化和缓的地方场强小。</p>
+<script type="math/tex; mode=display">
+\Delta U = |\int_{P}^{\theta} \vec{E} dl| = E \Delta n
+\\
+E = |\frac{\Delta U}{\Delta n}|= |\lim_{\Delta n \to 0}\frac{\Delta U}{\Delta n}| = |-\bigtriangledown U|</script><h1 id="本章小结"><a href="#本章小结" class="headerlink" title="本章小结"></a>本章小结</h1><p>本章中由两条主线，其中一条主线是电场分布的研究，另外一条是对电场能量分布的研究。对于电场分我们引入了电场强度这一物理量，并使用电场线描述其分布。对于电场的能量分布，我们引入了电势这一物理量，并使用等势描述电势的变化情况。最后综合以上两个模块，整体描述了电场分布与其能量之间的关系，也就是构建了场强与电势之间的变化关系。</p>
+<p>对于场强，主要有三种计算方法，分别是：点电荷试探定义法，高斯定理求解法，电势关系求解法</p>
+<script type="math/tex; mode=display">
+\vec{E} = \int d\vec{E} = \frac{1}{4\pi \epsilon_{0}}\int \frac{dq}{r^{2}} \hat{\vec{r}}
+\\
+\iint \vec{E} d\vec{S} = \frac{1}{\epsilon_{0}}\sum q
+\\
+\vec{E} = -\bigtriangledown U</script><p>实际上，高斯定理限制十分严格，对于带电体要求其带有严格的堆成性，但是场强叠加原理具有普适性。</p>
+<p>对于电势，主要有两种计算方法，其一是定义积分求解，另外一种方法是通过叠加定理求解。</p>
+<script type="math/tex; mode=display">
+U = \int_{P}^{\infty} \vec{E} d\vec{l}
+\\
+U = \int dU = \frac{1}{4\pi \epsilon_{0}}\int \frac{dq}{r}</script>
       
 
       
@@ -383,11 +441,11 @@ E=\sum_{i}\frac{q_{i}}{4\pi \epsilon_{0}r_{i}^{2}} \hat{r_{i}}</script><p>事实
   
 <nav id="article-nav">
   
-    <a href="/2220/08/19/%E5%89%8D%E8%B7%AF%E6%BC%AB%E6%BC%AB%EF%BC%8C%E7%9F%A2%E5%BF%97%E4%B8%8D%E6%B8%9D/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/21/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          2020.08.19
+          复变函数与积分变换--第七章--傅里叶变换
         
       </div>
     </a>
@@ -424,7 +482,7 @@ E=\sum_{i}\frac{q_{i}}{4\pi \epsilon_{0}r_{i}^{2}} \hat{r_{i}}</script><p>事实
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#电磁学概述"><span class="toc-number">1.</span> <span class="toc-text">电磁学概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电磁现象的基本概念和基本规律"><span class="toc-number">1.2.</span> <span class="toc-text">电磁现象的基本概念和基本规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电磁学内容"><span class="toc-number">1.3.</span> <span class="toc-text">电磁学内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电荷与库伦定律"><span class="toc-number">2.</span> <span class="toc-text">电荷与库伦定律</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电荷"><span class="toc-number">2.1.</span> <span class="toc-text">电荷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库伦定律"><span class="toc-number">2.2.</span> <span class="toc-text">库伦定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场力的叠加原理"><span class="toc-number">2.3.</span> <span class="toc-text">电场力的叠加原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电场与电场强度"><span class="toc-number">3.</span> <span class="toc-text">电场与电场强度</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#静电场的发展建立和发展"><span class="toc-number">4.</span> <span class="toc-text">静电场的发展建立和发展</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#静电场"><span class="toc-number">4.1.</span> <span class="toc-text">静电场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场强度"><span class="toc-number">4.2.</span> <span class="toc-text">电场强度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场强度的计算"><span class="toc-number">4.3.</span> <span class="toc-text">电场强度的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#点电荷电场强度的计算"><span class="toc-number">4.3.1.</span> <span class="toc-text">点电荷电场强度的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点电荷系的场强计算"><span class="toc-number">4.3.2.</span> <span class="toc-text">点电荷系的场强计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连续带电体的场强计算"><span class="toc-number">4.3.3.</span> <span class="toc-text">连续带电体的场强计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见带电物体的场强计算"><span class="toc-number">4.3.4.</span> <span class="toc-text">常见带电物体的场强计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#电偶极子"><span class="toc-number">4.3.4.1.</span> <span class="toc-text">电偶极子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#电偶极子延长线上任意一点的场强分布"><span class="toc-number">4.3.4.1.1.</span> <span class="toc-text">电偶极子延长线上任意一点的场强分布</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#电磁学概述"><span class="toc-number">1.</span> <span class="toc-text">电磁学概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电磁现象的基本概念和基本规律"><span class="toc-number">1.2.</span> <span class="toc-text">电磁现象的基本概念和基本规律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电磁学内容"><span class="toc-number">1.3.</span> <span class="toc-text">电磁学内容</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电荷与库伦定律"><span class="toc-number">2.</span> <span class="toc-text">电荷与库伦定律</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电荷"><span class="toc-number">2.1.</span> <span class="toc-text">电荷</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#库伦定律"><span class="toc-number">2.2.</span> <span class="toc-text">库伦定律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场力的叠加原理"><span class="toc-number">2.3.</span> <span class="toc-text">电场力的叠加原理</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电场与电场强度"><span class="toc-number">3.</span> <span class="toc-text">电场与电场强度</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#静电场"><span class="toc-number">3.1.</span> <span class="toc-text">静电场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场强度"><span class="toc-number">3.2.</span> <span class="toc-text">电场强度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场强度的计算"><span class="toc-number">3.3.</span> <span class="toc-text">电场强度的计算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#点电荷电场强度的计算"><span class="toc-number">3.3.1.</span> <span class="toc-text">点电荷电场强度的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#点电荷系的场强计算"><span class="toc-number">3.3.2.</span> <span class="toc-text">点电荷系的场强计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连续带电体的场强计算"><span class="toc-number">3.3.3.</span> <span class="toc-text">连续带电体的场强计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常见带电物体的场强计算"><span class="toc-number">3.3.4.</span> <span class="toc-text">常见带电物体的场强计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#电偶极子"><span class="toc-number">3.3.4.1.</span> <span class="toc-text">电偶极子</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#电偶极子延长线上任意一点的场强分布"><span class="toc-number">3.3.4.1.1.</span> <span class="toc-text">电偶极子延长线上任意一点的场强分布</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#均匀带电导线"><span class="toc-number">3.3.4.2.</span> <span class="toc-text">均匀带电导线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#电场与力矩"><span class="toc-number">3.3.4.3.</span> <span class="toc-text">电场与力矩</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#均匀带电球壳"><span class="toc-number">3.3.4.4.</span> <span class="toc-text">均匀带电球壳</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gauss环路定理与环路定理"><span class="toc-number">4.</span> <span class="toc-text">Gauss环路定理与环路定理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电磁力导言"><span class="toc-number">4.1.</span> <span class="toc-text">电磁力导言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#场的概念"><span class="toc-number">4.2.</span> <span class="toc-text">场的概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静电场的高斯定理与环路定理"><span class="toc-number">4.3.</span> <span class="toc-text">静电场的高斯定理与环路定理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#通量的计算"><span class="toc-number">4.3.1.</span> <span class="toc-text">通量的计算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静电场的高斯定理"><span class="toc-number">4.3.2.</span> <span class="toc-text">静电场的高斯定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#静电场的环路定理"><span class="toc-number">4.3.3.</span> <span class="toc-text">静电场的环路定理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#静电场特征总结"><span class="toc-number">4.4.</span> <span class="toc-text">静电场特征总结</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电势能与电势"><span class="toc-number">5.</span> <span class="toc-text">电势能与电势</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电势的引入"><span class="toc-number">5.1.</span> <span class="toc-text">电势的引入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#电场线与等势面"><span class="toc-number">6.</span> <span class="toc-text">电场线与等势面</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#电场线与等势面是处处正交的。"><span class="toc-number">6.1.</span> <span class="toc-text">电场线与等势面是处处正交的。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#电场线的方向总是由高电势指向低电势"><span class="toc-number">6.2.</span> <span class="toc-text">电场线的方向总是由高电势指向低电势</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vec-E-bigtriangledown-U"><span class="toc-number">6.3.</span> <span class="toc-text">$\vec{E} &#x3D; \bigtriangledown U$</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#本章小结"><span class="toc-number">7.</span> <span class="toc-text">本章小结</span></a></li></ol>
                     </div>
                 </span>
             </div>

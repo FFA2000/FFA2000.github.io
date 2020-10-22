@@ -20,8 +20,10 @@
 <meta property="og:image" content="http://yoursite.com/imgs/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/6.%20%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84/%E9%97%AE%E9%A2%98%E7%AE%80%E5%8C%96.png">
 <meta property="og:image" content="http://yoursite.com/imgs/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/6.%20%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84/%E5%B9%B3%E7%A7%BB%E6%98%A0%E5%B0%84.png">
 <meta property="og:image" content="http://yoursite.com/imgs/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/6.%20%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84/%E5%8F%8D%E6%BC%94%E6%98%A0%E5%B0%84.png">
+<meta property="og:image" content="http://yoursite.com/imgs/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/6.%20%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84/%E4%BF%9D%E5%AF%B9%E7%A7%B0%E6%80%A7.png">
+<meta property="og:image" content="http://yoursite.com/imgs/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/6.%20%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84/%E5%B8%A6%E5%BD%A2%E5%9F%9F%E5%8F%98%E6%8D%A2.png">
 <meta property="article:published_time" content="2020-09-06T11:07:26.000Z">
-<meta property="article:modified_time" content="2020-09-13T13:34:20.894Z">
+<meta property="article:modified_time" content="2020-09-21T11:32:55.276Z">
 <meta property="article:author" content="John Fine">
 <meta property="article:tag" content="复变函数">
 <meta name="twitter:card" content="summary">
@@ -283,6 +285,76 @@ w=\frac{1}{z}</script><p>令$z=|z|e^{i\theta}$，则有$w=\frac{1}{|z|}e^{i(-\th
 <div align=center>
     <img src="/imgs/复变函数与积分变换/6. 共形映射/反演映射.png">
 </div>
+
+<h1 id="分式线性映射的特性"><a href="#分式线性映射的特性" class="headerlink" title="分式线性映射的特性"></a>分式线性映射的特性</h1><h2 id="保形性"><a href="#保形性" class="headerlink" title="保形性"></a>保形性</h2><p>由于分式线性映射$w=\frac{az+b}{cz+d}$可分解为（整式）线性映射和倒数线性映射的复合。由于整式线性映射条件性质良好，下面我们主要讨论倒数映射$w=\frac{1}{z}$的性质。</p>
+<h2 id="单值性"><a href="#单值性" class="headerlink" title="单值性"></a>单值性</h2><p>规定： 当$z=\infty$时，w=0;当$z=0$时，$w=\infty$,由此可以看出导数映射在扩充复平面上是单值的。</p>
+<h2 id="解析性"><a href="#解析性" class="headerlink" title="解析性"></a>解析性</h2><ol>
+<li>当$z \neq \infty$且$z \neq 0$时，函数$w = \frac{1}{z}$解析，且$\frac{dw}{dz} = -\frac{1}{z^{2}}$不为0.</li>
+<li>当$z=\infty$时，函数$w=\frac{1}{z}$,此时令$\epsilon = \frac{1}{z}$，则$w= \epsilon = \phi (\epsilon)$，函数$\phi (\epsilon)$在0处解析，且$\phi ‘(0)=1 \neq 0$.</li>
+</ol>
+<p>通过上述分析可知，函数$w= \frac{1}{z}$在扩充复平面上除$z=0$外是共形映射。</p>
+<p>于是通过如下变换容易得出倒数映射$w=\frac{1}{z}$在$z=0$处也是共形映射。说明如下：<br>已知$w=\frac{1}{z}$在扩充复平面上除了z=0外均是共形映射，那么$z = \frac{1}{w}$在w扩充复平面上除了w=0外均是共形映射。特别地$z=\frac{1}{w}$在$w=\infty$处是共形映射，由此可以得到$w=\frac{1}{z}$在$z=0$处是共形映射。</p>
+<h2 id="保圆性"><a href="#保圆性" class="headerlink" title="保圆性"></a>保圆性</h2><p>倒数映射具有保圆性，有$w=\frac{1}{z}$可知，有$z=\frac{1}{w}$，令$z=x+iy,w=u+iv$,则有$x+iy = \frac{1}{u+iv} = \frac{u}{u^{2}+v^{2}}+i\frac{-v}{u^{2}+v^{2}}$.于是我们就得到了</p>
+<script type="math/tex; mode=display">
+x=\frac{u}{u^{2}+v^{2}}, y=\frac{-v}{u^{2}+v^{2}}</script><p>将此关系带去平面上任意一个源，可以知道，此时任然得到一个圆。同时对于分式线性映射而言，我们有如下定理，在扩充复平面上，分式线性映射能够把圆变成圆，也就是分式线性映射具有保圆性。</p>
+<p>对于保圆性的几点说明：</p>
+<ol>
+<li>如果给定的圆（或者直线）上没有点映射为无穷远点，则他就映射为半径有限的圆。</li>
+<li>若给定的圆或者直线上有一点映射为无穷远点，那么它就映射为直线。</li>
+<li>若对于圆弧、或者直线，如果其中一个端点映射成无穷远点，则他就映射为射线。</li>
+</ol>
+<h2 id="保对称性"><a href="#保对称性" class="headerlink" title="保对称性"></a>保对称性</h2><p>假若点$z_{1},z_{2}$关于圆周C对称，则在分式线性映射下，它们的像点$w_{1},w_{2}$也关于像曲线$C’$对称。</p>
+<div align=center>
+    <img src="/imgs/复变函数与积分变换/6. 共形映射/保对称性.png">
+</div>
+
+<h1 id="分式线性映射的分解"><a href="#分式线性映射的分解" class="headerlink" title="分式线性映射的分解"></a>分式线性映射的分解</h1><p>对于分式线性映射，主要有以下四种方法求得其在分式线性映射下的像曲线：</p>
+<ol>
+<li>分解为四种简单映射的复合。</li>
+<li>利用保圆性，取三点定圆，对于圆弧段或者直线段，两个端点必须选定。</li>
+<li>综合利用保圆性和保角性，首先找出原像曲线中一些特殊点的对应的像点，从而大致地确定处曲线的位置，然后找出一些特殊的曲线所对应的像，最后通过原像之间的关系确定像之间的关系即可。</li>
+</ol>
+<h1 id="位移决定分式线性映射的条件"><a href="#位移决定分式线性映射的条件" class="headerlink" title="位移决定分式线性映射的条件"></a>位移决定分式线性映射的条件</h1><p>对于某分式线性映射</p>
+<script type="math/tex; mode=display">
+w = \frac{az+b}{cz+d}</script><p>中含有四个常数a,b,c,d.实际上，通过分子分母同除某一常数将其归一化，容易知道，实际上分式线性映射中只存在三个独立的常数。由此可见需要给定三个条件，就能够决定一个分式线性映射。</p>
+<p>于是有如下定理：在z平面上任意给三个不同的点$z_{1},z_{2},z_{3}$，在w平面上也任意给定三个不同的点$w_{1},w_{2},w_{3}$，那么此时存在 <strong>唯一的</strong> 分式线性映射，将$z_{1},z_{2},z_{3}$分别依次映射为$w_{1},w_{2},w_{3}$。</p>
+<p>且此时该线性分式映射求解过程如下:<br>假定存在某一线性分式映射为$w = \frac{az+b}{cz+d}$.那么容易得到如下比值关系：</p>
+<script type="math/tex; mode=display">
+\frac{w-w_{1}}{w-w_{2}} = \frac{z-z_{1}}{z-z_{2}} \cdots \frac{cz_{2}+d}{cz_{1}+d}
+\\
+\frac{w_{3}-w_{1}}{w_{3}-w_{2}} = \frac{z_{3}-z_{1}}{z_{3}-z_{2}} \cdots \frac{cz_{2}+d}{cz_{1}+d}</script><p>由上述比值化简后得到如下公式，我们称为对应点公式:</p>
+<script type="math/tex; mode=display">
+\frac{w-w_{1}}{w-w_{2}}:\frac{w_{3}-w_{1}}{w_{3}-w_{2}} = \frac{z-z_{1}}{z-z_{2}}:\frac{z_{3}-z_{1}}{z_{3}-z_{2}}</script><p>由于分式线性映射具有保圆性，因此该公式通常用于：把过$z_{1},z_{2},z_{3}$三点的圆或者圆弧映射到过$w_{1},w_{2},w_{3}$三点的圆或者圆弧，<br>同时若$z_{1,2,3},w_{1,2,3}$中任意一点为无穷远点，则需要在对应点公式中将其替换为1.</p>
+<p>接下来我们做一个简要的说明：设$w=f(z)$为分式线性映射，且$f(z_{1})=w_{1},f(z_{2})=w_{2}$,那么上式可以表示为：</p>
+<script type="math/tex; mode=display">
+\frac{w-w_{1}}{w-w_{2}} = k \frac{z-z_{1}}{z-z_{2}}</script><p>特别地，若$f(z_{1})=0,而f(z_{2})=\infty$,那么则有$w=k\frac{z-z_{1}}{z-z_{2}}$.</p>
+<h1 id="两个典型区域之间的映射"><a href="#两个典型区域之间的映射" class="headerlink" title="两个典型区域之间的映射"></a>两个典型区域之间的映射</h1><p>两个典型区域分别指的是上半平面和单位圆域，由于这通常映射均可以由此二者的映射转换推导出来。</p>
+<h2 id="上半平面映射为单位圆域"><a href="#上半平面映射为单位圆域" class="headerlink" title="上半平面映射为单位圆域"></a>上半平面映射为单位圆域</h2><p>将上半平面映射为单位圆域有多种方法：<br>1， 三点定圆：在实轴和单位圆周上分别取三点：例如$z_{1}=0,z_{2}=1,z_{3}=\infty$和$w_{1}=-1,w_{2}=-i,w_{3}=1$.依据对应点公式即可得到此时$w=\frac{z-i}{z+i}$.<br>需要说明的是，此时对应并不是唯一的，当我们取点不同，得到的对应法则也不尽相同。所以需要依据不同的点来确定对应法则。</p>
+<ol>
+<li>通用解法：在上半平面内任取一点$z_{0}$,使其映射到w平面的点$w_{1}=0$,依据保对称性，则有：<script type="math/tex; mode=display">
+\bar{z_{0}} \to w_{2} = \infty</script></li>
+</ol>
+<p>从而容易构造此时的分式线性映射为：</p>
+<script type="math/tex; mode=display">
+w = k \frac{z-z_{0}}{z-\bar{z_{0}}}</script><p>而当z在实轴上取值的时候，有</p>
+<script type="math/tex; mode=display">
+|\frac{z-z_{0}}{z-\bar{z_{0}}}|=1,|w|=1</script><p>由此可以推知：</p>
+<script type="math/tex; mode=display">
+|k|=1,也就是k=e^{i\theta}</script><p>那么得到同式表达式：$w=e^{i\theta \frac{z-z_{0}}{z-\bar{z_{0}}}}$.<br>特别地，若取$\theta = 0,z_{0}=1$,那么此时得到了和方法1一样的结果。</p>
+<h2 id="单位圆域映射到单位圆域"><a href="#单位圆域映射到单位圆域" class="headerlink" title="单位圆域映射到单位圆域"></a>单位圆域映射到单位圆域</h2><p>首先我们给出一种能够直接求解通式的方法：<br>在|z|&lt;1内任取一点$z_{0} \to w_{1}=0$,由保对称点性，知道$\frac{1}{\bar{z_{0}}} \to w_{2}=\infty$.因此相应的分式线性映射为：</p>
+<script type="math/tex; mode=display">
+w=k\frac{z-z_{0}}{z-\frac{1}{\bar{z_{0}}}}</script><p>也就是:</p>
+<script type="math/tex; mode=display">
+w=k_{1}\frac{z-z_{0}}{1-\bar{z_{0}}z},(其中k_{1}等于-k\bar{z_{0}}待定。)</script><h1 id="初等函数的映射"><a href="#初等函数的映射" class="headerlink" title="初等函数的映射"></a>初等函数的映射</h1><h2 id="幂函数"><a href="#幂函数" class="headerlink" title="幂函数"></a>幂函数</h2><p>幂函数$w=z^{n},(n \geq 2 为整数)$<br>令$z=re^{i\theta}$,那么此时有$w=r^{n}e^{in\theta}$,即$|w| = r^{n}$,$arg w =n \theta$.</p>
+<h3 id="幂函数的映射性质"><a href="#幂函数的映射性质" class="headerlink" title="幂函数的映射性质"></a>幂函数的映射性质</h3><p>幂函数映射的本质就是扩大顶点在原点的角形域(或扇形域).相应地，更是函数的映射特点就是缩小顶点处的角形域和扇形域。</p>
+<h3 id="幂函数的保形性"><a href="#幂函数的保形性" class="headerlink" title="幂函数的保形性"></a>幂函数的保形性</h3><p>分析(1)在z平面上处处解析，且$\frac{dw}{dz} = nz^{n-1}$;显然只有当$z \neq 0$时幂函数的倒数不为0.于是我们容易知道，除了原点外，幂函数$w=z^{n}$是复平面上的第一类保角映射。同时若在角形域或者扇形域$(0 &lt; \theta &lt; \theta_{0})$上，如果$\theta_{0} \leq \frac{2\pi}{n}$,则幂函数$w=z^{n}$是共形映射。</p>
+<h2 id="指数函数"><a href="#指数函数" class="headerlink" title="指数函数"></a>指数函数</h2><p>指数函数$z=x+iy$,则有$w=e^{z}=e^{x}\cdots e^{iy}$.</p>
+<div align=center>
+    <img src="/imgs/复变函数与积分变换/6. 共形映射/带形域变换.png">
+</div>
+
+<p>可以说指数函数$w=e^{z}$的映射特点就是将水平带形映射为复平面上的扇形或者圆。</p>
+
       
 
       
@@ -405,7 +477,7 @@ w=\frac{1}{z}</script><p>令$z=|z|e^{i\theta}$，则有$w=\frac{1}{|z|}e^{i(-\th
   
 <nav id="article-nav">
   
-    <a href="/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E2%80%94%E4%BF%A1%E6%81%AF%E4%B8%8E%E7%BC%96%E7%A0%81/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
@@ -446,7 +518,7 @@ w=\frac{1}{z}</script><p>令$z=|z|e^{i\theta}$，则有$w=\frac{1}{|z|}e^{i(-\th
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共形映射的概念"><span class="toc-number">2.</span> <span class="toc-text">共形映射的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#伸缩率与旋转角"><span class="toc-number">2.1.</span> <span class="toc-text">伸缩率与旋转角</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#伸缩率"><span class="toc-number">2.1.1.</span> <span class="toc-text">伸缩率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旋转角"><span class="toc-number">2.1.2.</span> <span class="toc-text">旋转角</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导数的几何意义"><span class="toc-number">2.2.</span> <span class="toc-text">导数的几何意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共形映射的性质"><span class="toc-number">2.3.</span> <span class="toc-text">共形映射的性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一类保角映射"><span class="toc-number">2.4.</span> <span class="toc-text">第一类保角映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二类保角映射"><span class="toc-number">2.5.</span> <span class="toc-text">第二类保角映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共形映射"><span class="toc-number">2.6.</span> <span class="toc-text">共形映射</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共形映射的基本问题"><span class="toc-number">3.</span> <span class="toc-text">共形映射的基本问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#共形映射研究的两个基本问题"><span class="toc-number">3.1.</span> <span class="toc-text">共形映射研究的两个基本问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一有关定理定理介绍"><span class="toc-number">3.2.</span> <span class="toc-text">问题一有关定理定理介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#保域性定理"><span class="toc-number">3.2.1.</span> <span class="toc-text">保域性定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#边界对应原理"><span class="toc-number">3.2.2.</span> <span class="toc-text">边界对应原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求解像区域的一般步骤"><span class="toc-number">3.3.</span> <span class="toc-text">求解像区域的一般步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题二有关定理介绍"><span class="toc-number">3.4.</span> <span class="toc-text">问题二有关定理介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#黎曼存在唯一性定理"><span class="toc-number">3.4.1.</span> <span class="toc-text">黎曼存在唯一性定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题的简化"><span class="toc-number">3.4.2.</span> <span class="toc-text">问题的简化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分式线性映射"><span class="toc-number">4.</span> <span class="toc-text">分式线性映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分式线性映射的定义"><span class="toc-number">4.1.</span> <span class="toc-text">分式线性映射的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单函数的分式线性映射"><span class="toc-number">4.2.</span> <span class="toc-text">简单函数的分式线性映射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#平移映射"><span class="toc-number">4.2.1.</span> <span class="toc-text">平移映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旋转映射"><span class="toc-number">4.2.2.</span> <span class="toc-text">旋转映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相似映射"><span class="toc-number">4.2.3.</span> <span class="toc-text">相似映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反演映射"><span class="toc-number">4.2.4.</span> <span class="toc-text">反演映射</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#引言"><span class="toc-number">1.</span> <span class="toc-text">引言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共形映射的概念"><span class="toc-number">2.</span> <span class="toc-text">共形映射的概念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#伸缩率与旋转角"><span class="toc-number">2.1.</span> <span class="toc-text">伸缩率与旋转角</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#伸缩率"><span class="toc-number">2.1.1.</span> <span class="toc-text">伸缩率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旋转角"><span class="toc-number">2.1.2.</span> <span class="toc-text">旋转角</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#导数的几何意义"><span class="toc-number">2.2.</span> <span class="toc-text">导数的几何意义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共形映射的性质"><span class="toc-number">2.3.</span> <span class="toc-text">共形映射的性质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一类保角映射"><span class="toc-number">2.4.</span> <span class="toc-text">第一类保角映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二类保角映射"><span class="toc-number">2.5.</span> <span class="toc-text">第二类保角映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#共形映射"><span class="toc-number">2.6.</span> <span class="toc-text">共形映射</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#共形映射的基本问题"><span class="toc-number">3.</span> <span class="toc-text">共形映射的基本问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#共形映射研究的两个基本问题"><span class="toc-number">3.1.</span> <span class="toc-text">共形映射研究的两个基本问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题一有关定理定理介绍"><span class="toc-number">3.2.</span> <span class="toc-text">问题一有关定理定理介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#保域性定理"><span class="toc-number">3.2.1.</span> <span class="toc-text">保域性定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#边界对应原理"><span class="toc-number">3.2.2.</span> <span class="toc-text">边界对应原理</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#求解像区域的一般步骤"><span class="toc-number">3.3.</span> <span class="toc-text">求解像区域的一般步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题二有关定理介绍"><span class="toc-number">3.4.</span> <span class="toc-text">问题二有关定理介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#黎曼存在唯一性定理"><span class="toc-number">3.4.1.</span> <span class="toc-text">黎曼存在唯一性定理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题的简化"><span class="toc-number">3.4.2.</span> <span class="toc-text">问题的简化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分式线性映射"><span class="toc-number">4.</span> <span class="toc-text">分式线性映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#分式线性映射的定义"><span class="toc-number">4.1.</span> <span class="toc-text">分式线性映射的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#简单函数的分式线性映射"><span class="toc-number">4.2.</span> <span class="toc-text">简单函数的分式线性映射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#平移映射"><span class="toc-number">4.2.1.</span> <span class="toc-text">平移映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#旋转映射"><span class="toc-number">4.2.2.</span> <span class="toc-text">旋转映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#相似映射"><span class="toc-number">4.2.3.</span> <span class="toc-text">相似映射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#反演映射"><span class="toc-number">4.2.4.</span> <span class="toc-text">反演映射</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分式线性映射的特性"><span class="toc-number">5.</span> <span class="toc-text">分式线性映射的特性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#保形性"><span class="toc-number">5.1.</span> <span class="toc-text">保形性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单值性"><span class="toc-number">5.2.</span> <span class="toc-text">单值性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解析性"><span class="toc-number">5.3.</span> <span class="toc-text">解析性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保圆性"><span class="toc-number">5.4.</span> <span class="toc-text">保圆性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#保对称性"><span class="toc-number">5.5.</span> <span class="toc-text">保对称性</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#分式线性映射的分解"><span class="toc-number">6.</span> <span class="toc-text">分式线性映射的分解</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#位移决定分式线性映射的条件"><span class="toc-number">7.</span> <span class="toc-text">位移决定分式线性映射的条件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#两个典型区域之间的映射"><span class="toc-number">8.</span> <span class="toc-text">两个典型区域之间的映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#上半平面映射为单位圆域"><span class="toc-number">8.1.</span> <span class="toc-text">上半平面映射为单位圆域</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单位圆域映射到单位圆域"><span class="toc-number">8.2.</span> <span class="toc-text">单位圆域映射到单位圆域</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#初等函数的映射"><span class="toc-number">9.</span> <span class="toc-text">初等函数的映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#幂函数"><span class="toc-number">9.1.</span> <span class="toc-text">幂函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#幂函数的映射性质"><span class="toc-number">9.1.1.</span> <span class="toc-text">幂函数的映射性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#幂函数的保形性"><span class="toc-number">9.1.2.</span> <span class="toc-text">幂函数的保形性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指数函数"><span class="toc-number">9.2.</span> <span class="toc-text">指数函数</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

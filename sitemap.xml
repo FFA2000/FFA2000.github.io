@@ -2,16 +2,149 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1/</loc>
+    <loc>http://yoursite.com/2020/10/03/Verilog%E7%A1%AC%E4%BB%B6%E6%8F%8F%E8%BF%B0%E8%AF%AD%E8%A8%80/</loc>
     
-    <lastmod>2020-09-20T07:33:33.079Z</lastmod>
+    <lastmod>2020-10-22T03:55:47.095Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/09/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86-%E7%AC%AC%E4%B8%89%E8%AE%B2-%E6%B6%88%E8%B4%B9%E8%A1%8C%E4%B8%BA/</loc>
+    
+    <lastmod>2020-10-22T03:49:05.970Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/25/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86-%E7%AC%AC%E4%BA%8C%E8%AE%B2-%E5%9F%BA%E6%9C%AC%E6%A8%A1%E5%9E%8B/</loc>
+    
+    <lastmod>2020-10-22T02:46:25.813Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/20/%E7%94%B5%E7%A3%81%E5%AD%A6-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E6%81%92%E7%A3%81%E5%9C%BA/</loc>
+    
+    <lastmod>2020-10-20T10:01:36.681Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/12/%E7%94%B5%E7%A3%81%E5%AD%A6-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E7%94%B5%E5%9C%BA%E4%B8%AD%E7%9A%84%E5%AF%BC%E4%BD%93/</loc>
+    
+    <lastmod>2020-10-20T07:43:54.962Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/03/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E7%BB%84%E5%90%88%E9%80%BB%E8%BE%91%E7%94%B5%E8%B7%AF/</loc>
+    
+    <lastmod>2020-10-20T07:43:44.247Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/07/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90/</loc>
+    
+    <lastmod>2020-10-19T15:07:22.708Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/24/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%8E%9F%E7%90%86%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E8%AE%B2%E2%80%94%E2%80%94%E5%AF%BC%E8%A8%80/</loc>
+    
+    <lastmod>2020-10-14T09:42:38.241Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/06/FPGA%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/</loc>
+    
+    <lastmod>2020-10-13T14:08:28.250Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/26/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E6%97%B6%E9%97%B4%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90/</loc>
+    
+    <lastmod>2020-10-07T15:37:25.767Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/17/%E7%94%B5%E7%A3%81%E5%AD%A6%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E2%80%94%E9%9D%99%E7%94%B5%E5%9C%BA/</loc>
+    
+    <lastmod>2020-10-06T03:29:35.647Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/10/05/%E5%81%B6%E5%B0%94%E5%B0%8F%E8%AE%B0%E5%85%B6%E4%B8%80/</loc>
+    
+    <lastmod>2020-10-05T15:50:34.738Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2220/08/19/%E5%89%8D%E8%B7%AF%E6%BC%AB%E6%BC%AB%EF%BC%8C%E7%9F%A2%E5%BF%97%E4%B8%8D%E6%B8%9D/</loc>
+    
+    <lastmod>2020-10-05T15:18:28.052Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/26/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%B8%89%E7%AB%A0-%E9%97%A8%E7%94%B5%E8%B7%AF/</loc>
+    
+    <lastmod>2020-10-03T12:06:43.483Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/29/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AB%E7%AB%A0-%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E5%8F%98%E6%8D%A2/</loc>
+    
+    <lastmod>2020-09-30T12:10:53.604Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/21/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E4%B8%83%E7%AB%A0-%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/</loc>
+    
+    <lastmod>2020-09-29T08:56:30.050Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/23/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E9%80%BB%E8%BE%91%E4%BB%A3%E6%95%B0%E4%B8%8E%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF/</loc>
+    
+    <lastmod>2020-09-26T09:02:25.839Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/09/17/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E2%80%94%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%88%86%E6%9E%90%E5%AF%BC%E8%AE%BA/</loc>
     
-    <lastmod>2020-09-18T14:10:02.086Z</lastmod>
+    <lastmod>2020-09-23T15:46:25.557Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/14/%E6%95%B0%E5%AD%97%E7%94%B5%E8%B7%AF%E4%B8%8E%E9%80%BB%E8%BE%91%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E2%80%94%E4%BF%A1%E6%81%AF%E4%B8%8E%E7%BC%96%E7%A0%81/</loc>
+    
+    <lastmod>2020-09-23T03:24:14.165Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/22/%E5%8F%91%E5%B1%95%E7%BB%8F%E6%B5%8E%E5%AD%A6%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E2%80%94%E7%BB%AA%E8%AE%BA/</loc>
+    
+    <lastmod>2020-09-22T11:41:16.274Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/06/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</loc>
+    
+    <lastmod>2020-09-21T11:32:55.276Z</lastmod>
     
   </url>
   
@@ -19,13 +152,6 @@
     <loc>http://yoursite.com/2020/09/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E4%BA%8C%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/</loc>
     
     <lastmod>2020-09-18T08:22:03.183Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/09/17/%E7%94%B5%E7%A3%81%E5%AD%A6%E2%80%94%E2%80%94%E7%AC%AC%E4%B8%80%E7%AB%A0%E2%80%94%E2%80%94%E9%9D%99%E7%94%B5%E5%9C%BA/</loc>
-    
-    <lastmod>2020-09-17T15:37:25.047Z</lastmod>
     
   </url>
   
@@ -89,13 +215,6 @@
     <loc>http://yoursite.com/2020/09/16/%E3%80%8A%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AC%AC%E5%9B%9B%E7%AB%A0-%E5%A4%84%E7%90%86%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</loc>
     
     <lastmod>2020-09-16T14:43:21.459Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/09/06/%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2-%E7%AC%AC%E5%85%AD%E7%AB%A0-%E5%85%B1%E5%BD%A2%E6%98%A0%E5%B0%84%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</loc>
-    
-    <lastmod>2020-09-13T13:34:20.894Z</lastmod>
     
   </url>
   
@@ -208,13 +327,6 @@
     <loc>http://yoursite.com/2020/08/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%BF%90%E7%94%A8/</loc>
     
     <lastmod>2020-08-19T16:17:30.331Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2220/08/19/%E5%89%8D%E8%B7%AF%E6%BC%AB%E6%BC%AB%EF%BC%8C%E7%9F%A2%E5%BF%97%E4%B8%8D%E6%B8%9D/</loc>
-    
-    <lastmod>2020-08-19T03:50:11.051Z</lastmod>
     
   </url>
   
